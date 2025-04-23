@@ -1,0 +1,3 @@
+Browser remains open with session at: https://suite.auterion.com/authenticated?code=ouk8AVDpm1bkO0lPcypq_X92CKAyEpOU2YHIyUbvswVZo&state=U1NfeXNWeWlVMXMzUzEteUgyWXFaTWZOWmNtN0p4VG5fMVZmM3pIV0ZoSQ%3D%3D
+Script has finished execution, but browser should remain open.
+Close browser manually when finished examining.

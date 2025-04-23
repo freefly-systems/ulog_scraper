@@ -1,0 +1,280 @@
+2025-04-23 15:00:30,162 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:00:33,065 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:00:38,437 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:00:38,437 - ulog_scraper - INFO - Attempting to find and click login button
+2025-04-23 15:00:38,437 - ulog_scraper - INFO - Trying selector: xpath - //button[contains(@class, 'button-primary') and text()='Login']
+2025-04-23 15:00:38,454 - ulog_scraper - INFO - No elements found with selector //button[contains(@class, 'button-primary') and text()='Login']
+2025-04-23 15:00:38,454 - ulog_scraper - INFO - Trying selector: xpath - //button[text()='Login']
+2025-04-23 15:00:38,466 - ulog_scraper - INFO - No elements found with selector //button[text()='Login']
+2025-04-23 15:00:38,466 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:00:38,478 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:00:38,493 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:00:39,323 - ulog_scraper - INFO - Clicked login button
+2025-04-23 15:00:39,323 - ulog_scraper - INFO - Waiting for email input field
+2025-04-23 15:00:49,745 - ulog_scraper - ERROR - Login process failed: Message: 
+Stacktrace:
+#0 0x5f006a1c175a <unknown>
+#1 0x5f0069c744b0 <unknown>
+#2 0x5f0069cc59b3 <unknown>
+#3 0x5f0069cc5ba1 <unknown>
+#4 0x5f0069d141f4 <unknown>
+#5 0x5f0069ceb5bd <unknown>
+#6 0x5f0069d115e0 <unknown>
+#7 0x5f0069ceb363 <unknown>
+#8 0x5f0069cb7d63 <unknown>
+#9 0x5f0069cb89c1 <unknown>
+#10 0x5f006a186a6b <unknown>
+#11 0x5f006a18a951 <unknown>
+#12 0x5f006a16eb62 <unknown>
+#13 0x5f006a18b4c4 <unknown>
+#14 0x5f006a15313f <unknown>
+#15 0x5f006a1af6f8 <unknown>
+#16 0x5f006a1af8d6 <unknown>
+#17 0x5f006a1c05a6 <unknown>
+#18 0x75ab7b894ac3 <unknown>
+
+2025-04-23 15:00:50,955 - ulog_scraper - ERROR - Saved error state screenshot
+2025-04-23 15:03:18,992 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:03:19,667 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:03:19,731 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:03:22,654 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:03:27,932 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:03:27,932 - ulog_scraper - INFO - Attempting to find and click login button
+2025-04-23 15:03:27,932 - ulog_scraper - INFO - Trying selector: xpath - //button[contains(@class, 'button-primary') and text()='Login']
+2025-04-23 15:03:27,943 - ulog_scraper - INFO - No elements found with selector //button[contains(@class, 'button-primary') and text()='Login']
+2025-04-23 15:03:27,943 - ulog_scraper - INFO - Trying selector: xpath - //button[text()='Login']
+2025-04-23 15:03:27,952 - ulog_scraper - INFO - No elements found with selector //button[text()='Login']
+2025-04-23 15:03:27,952 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:03:27,961 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:03:27,973 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:03:28,682 - ulog_scraper - INFO - Clicked login button
+2025-04-23 15:03:28,682 - ulog_scraper - INFO - Waiting for email input field
+2025-04-23 15:03:39,090 - ulog_scraper - ERROR - Login process failed: Message: 
+Stacktrace:
+#0 0x56cbc4a0a75a <unknown>
+#1 0x56cbc44bd4b0 <unknown>
+#2 0x56cbc450e9b3 <unknown>
+#3 0x56cbc450eba1 <unknown>
+#4 0x56cbc455d1f4 <unknown>
+#5 0x56cbc45345bd <unknown>
+#6 0x56cbc455a5e0 <unknown>
+#7 0x56cbc4534363 <unknown>
+#8 0x56cbc4500d63 <unknown>
+#9 0x56cbc45019c1 <unknown>
+#10 0x56cbc49cfa6b <unknown>
+#11 0x56cbc49d3951 <unknown>
+#12 0x56cbc49b7b62 <unknown>
+#13 0x56cbc49d44c4 <unknown>
+#14 0x56cbc499c13f <unknown>
+#15 0x56cbc49f86f8 <unknown>
+#16 0x56cbc49f88d6 <unknown>
+#17 0x56cbc4a095a6 <unknown>
+#18 0x7882f5a94ac3 <unknown>
+
+2025-04-23 15:03:40,262 - ulog_scraper - ERROR - Saved error state screenshot
+2025-04-23 15:05:05,779 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:05:06,363 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:05:06,415 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:05:09,060 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:05:14,327 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:05:14,327 - ulog_scraper - INFO - Attempting to find and click login button
+2025-04-23 15:05:14,327 - ulog_scraper - INFO - Trying selector: xpath - //button[contains(@class, 'button-primary') and text()='Login']
+2025-04-23 15:05:14,338 - ulog_scraper - INFO - No elements found with selector //button[contains(@class, 'button-primary') and text()='Login']
+2025-04-23 15:05:14,338 - ulog_scraper - INFO - Trying selector: xpath - //button[text()='Login']
+2025-04-23 15:05:14,346 - ulog_scraper - INFO - No elements found with selector //button[text()='Login']
+2025-04-23 15:05:14,346 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:05:14,354 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:05:14,366 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:05:15,060 - ulog_scraper - INFO - Clicked login button
+2025-04-23 15:05:15,060 - ulog_scraper - INFO - Waiting for email input field
+2025-04-23 15:05:25,485 - ulog_scraper - ERROR - Login process failed: Message: 
+Stacktrace:
+#0 0x5c3166f2675a <unknown>
+#1 0x5c31669d94b0 <unknown>
+#2 0x5c3166a2a9b3 <unknown>
+#3 0x5c3166a2aba1 <unknown>
+#4 0x5c3166a791f4 <unknown>
+#5 0x5c3166a505bd <unknown>
+#6 0x5c3166a765e0 <unknown>
+#7 0x5c3166a50363 <unknown>
+#8 0x5c3166a1cd63 <unknown>
+#9 0x5c3166a1d9c1 <unknown>
+#10 0x5c3166eeba6b <unknown>
+#11 0x5c3166eef951 <unknown>
+#12 0x5c3166ed3b62 <unknown>
+#13 0x5c3166ef04c4 <unknown>
+#14 0x5c3166eb813f <unknown>
+#15 0x5c3166f146f8 <unknown>
+#16 0x5c3166f148d6 <unknown>
+#17 0x5c3166f255a6 <unknown>
+#18 0x70070d694ac3 <unknown>
+
+2025-04-23 15:05:26,337 - ulog_scraper - ERROR - Saved error state screenshot
+2025-04-23 15:18:46,305 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:18:46,885 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:18:46,946 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:18:49,813 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:18:55,082 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:18:55,082 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 15:18:55,082 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 15:18:55,082 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:18:55,091 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:18:55,101 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:18:55,833 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 15:18:55,834 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 15:18:59,590 - ulog_scraper - INFO - Trying to find email field with: css selector - input[type='email']
+2025-04-23 15:18:59,601 - ulog_scraper - INFO - Trying to find email field with: css selector - input[name='email']
+2025-04-23 15:18:59,612 - ulog_scraper - INFO - Trying to find email field with: css selector - input[placeholder*='mail']
+2025-04-23 15:18:59,620 - ulog_scraper - INFO - Trying to find email field with: xpath - //input[@type='email']
+2025-04-23 15:18:59,628 - ulog_scraper - INFO - Trying to find email field with: xpath - //input[contains(@placeholder, 'mail')]
+2025-04-23 15:18:59,637 - ulog_scraper - INFO - Trying to find email field with: css selector - input.email-input
+2025-04-23 15:18:59,646 - ulog_scraper - WARNING - Could not find email input field, trying to identify all input elements
+2025-04-23 15:18:59,679 - ulog_scraper - INFO - Input 0: type=hidden, name=state, placeholder=
+2025-04-23 15:18:59,689 - ulog_scraper - INFO - Input 1: type=text, name=username, placeholder=
+2025-04-23 15:18:59,702 - ulog_scraper - INFO - Input 2: type=password, name=, placeholder=
+2025-04-23 15:18:59,719 - ulog_scraper - INFO - Input 3: type=hidden, name=js-available, placeholder=
+2025-04-23 15:18:59,727 - ulog_scraper - INFO - Input 4: type=hidden, name=webauthn-available, placeholder=
+2025-04-23 15:18:59,743 - ulog_scraper - INFO - Input 5: type=hidden, name=is-brave, placeholder=
+2025-04-23 15:18:59,755 - ulog_scraper - INFO - Input 6: type=hidden, name=webauthn-platform-available, placeholder=
+2025-04-23 15:18:59,755 - ulog_scraper - ERROR - Error during login process: Email input field not found
+2025-04-23 15:19:00,589 - ulog_scraper - ERROR - Login process failed: Email input field not found
+2025-04-23 15:19:01,374 - ulog_scraper - ERROR - Saved error state screenshot
+2025-04-23 15:19:01,447 - ulog_scraper - INFO - Spider closed: finished
+2025-04-23 15:27:38,496 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:27:39,142 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:27:39,200 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:27:41,798 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:27:47,065 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:27:47,065 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 15:27:47,065 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 15:27:47,065 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:27:47,074 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:27:47,084 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:27:47,809 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 15:27:47,809 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 15:27:51,555 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:27:51,569 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:27:51,569 - ulog_scraper - INFO - Entering email address
+2025-04-23 15:27:51,623 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 15:27:51,644 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 15:27:52,360 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 15:27:52,360 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 15:27:56,206 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 15:27:56,206 - ulog_scraper - INFO - Entering password
+2025-04-23 15:27:56,240 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 15:27:56,254 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 15:27:58,076 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 15:27:58,076 - ulog_scraper - INFO - Waiting for successful login
+2025-04-23 15:27:58,084 - ulog_scraper - INFO - Successfully logged in!
+2025-04-23 15:27:58,090 - ulog_scraper - INFO - Getting cookies from browser
+2025-04-23 15:27:58,094 - ulog_scraper - INFO - Navigating to logs page
+2025-04-23 15:28:01,675 - ulog_scraper - INFO - Saved screenshot of logs page
+2025-04-23 15:28:01,679 - ulog_scraper - INFO - Logs page URL: https://suite.auterion.com/login
+2025-04-23 15:28:01,679 - ulog_scraper - INFO - Transferring control to Scrapy for further processing
+2025-04-23 15:28:02,304 - ulog_scraper - INFO - Processing logs page with Scrapy
+2025-04-23 15:28:02,304 - ulog_scraper - WARNING - No log links found. Check the CSS selector.
+2025-04-23 15:28:02,385 - ulog_scraper - INFO - Spider closed: finished
+2025-04-23 15:31:44,288 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:31:44,863 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:31:44,911 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:31:47,541 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:31:52,807 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:31:52,807 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 15:31:52,807 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 15:31:52,807 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:31:52,817 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:31:52,827 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:31:53,614 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 15:31:53,615 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 15:31:57,431 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:31:57,446 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:31:57,446 - ulog_scraper - INFO - Entering email address
+2025-04-23 15:31:57,527 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 15:31:57,545 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 15:31:58,172 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 15:31:58,172 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 15:32:01,947 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 15:32:01,947 - ulog_scraper - INFO - Entering password
+2025-04-23 15:32:01,980 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 15:32:01,987 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 15:32:03,927 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 15:32:03,927 - ulog_scraper - INFO - Waiting for successful login
+2025-04-23 15:32:03,932 - ulog_scraper - INFO - Login appears successful!
+2025-04-23 15:32:04,169 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=oCv7aoYgRc2DGELtLm3Vv4HhyIScMaGGa5gzFo38h_pWX&state=OVVjNTN0bTV3NXNQck00bDhNOH5vdXNnMnBIRHExcXBCdk4xeHFJRnhWRw%3D%3D
+2025-04-23 15:32:04,173 - ulog_scraper - INFO - Saved post-login page source to logs/post_login_page.html
+2025-04-23 15:32:04,173 - ulog_scraper - INFO - Pausing execution to examine browser state. Browser will remain open.
+2025-04-23 15:32:04,173 - ulog_scraper - INFO - Check the saved screenshots and HTML in the logs directory.
+2025-04-23 15:32:04,173 - ulog_scraper - INFO - Login successful - pausing execution to examine state
+2025-04-23 15:32:04,255 - ulog_scraper - INFO - Spider closed: finished
+2025-04-23 15:39:22,692 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:39:23,328 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:39:23,388 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:39:25,538 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:39:30,795 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:39:30,796 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 15:39:30,796 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 15:39:30,796 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:39:30,805 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:39:30,816 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:39:31,383 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 15:39:31,384 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 15:39:35,166 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:39:35,180 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:39:35,180 - ulog_scraper - INFO - Entering email address
+2025-04-23 15:39:35,239 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 15:39:35,256 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 15:39:36,296 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 15:39:36,296 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 15:39:40,102 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 15:39:40,103 - ulog_scraper - INFO - Entering password
+2025-04-23 15:39:40,135 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 15:39:40,143 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 15:39:42,018 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 15:39:42,018 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-23 15:39:42,029 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-23 15:39:42,257 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=H0SKplVgB_5hVqr70Ibt--z35iHZYqd1YZzetwOCSIv1U&state=Vi4yeFY3OFVWVUpHOHpqRUJFalhqSy1xdU9pemhnSlAxZHIxS0hsdC1jVA%3D%3D
+2025-04-23 15:39:42,257 - ulog_scraper - INFO - --- LISTING ALL VISIBLE ELEMENTS ON PAGE ---
+2025-04-23 15:39:42,270 - ulog_scraper - INFO - Found 61 total elements on the page
+2025-04-23 15:39:42,282 - ulog_scraper - INFO - --- HEADINGS AND NAVIGATION ---
+2025-04-23 15:39:42,299 - ulog_scraper - INFO - --- INTERACTIVE ELEMENTS ---
+2025-04-23 15:39:42,345 - ulog_scraper - INFO - Saved post-login page source to logs/post_login_page.html
+2025-04-23 15:39:42,346 - ulog_scraper - INFO - Browser will remain open. You can examine it directly.
+2025-04-23 15:39:42,346 - ulog_scraper - INFO - The script has completed but the browser window will stay open.
+2025-04-23 15:39:42,346 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-23 15:39:42,359 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-23 15:45:17,744 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 15:45:18,340 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 15:45:18,396 - ulog_scraper - INFO - Starting login process
+2025-04-23 15:45:21,264 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 15:45:26,542 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 15:45:26,542 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 15:45:26,542 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 15:45:26,542 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 15:45:26,551 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 15:45:26,562 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 15:45:27,523 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 15:45:27,524 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 15:45:27,524 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:45:27,539 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 15:45:27,539 - ulog_scraper - INFO - Entering email address
+2025-04-23 15:45:27,731 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 15:45:27,743 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 15:45:28,333 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 15:45:28,333 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 15:45:32,120 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 15:45:32,121 - ulog_scraper - INFO - Entering password
+2025-04-23 15:45:32,156 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 15:45:32,164 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 15:45:34,366 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 15:45:34,366 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-23 15:45:34,375 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-23 15:45:34,565 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=ouk8AVDpm1bkO0lPcypq_X92CKAyEpOU2YHIyUbvswVZo&state=U1NfeXNWeWlVMXMzUzEteUgyWXFaTWZOWmNtN0p4VG5fMVZmM3pIV0ZoSQ%3D%3D
+2025-04-23 15:45:34,565 - ulog_scraper - INFO - --- LISTING ALL VISIBLE ELEMENTS ON PAGE ---
+2025-04-23 15:45:34,583 - ulog_scraper - INFO - Found 60 total elements on the page
+2025-04-23 15:45:34,593 - ulog_scraper - INFO - --- HEADINGS AND NAVIGATION ---
+2025-04-23 15:45:34,604 - ulog_scraper - INFO - --- INTERACTIVE ELEMENTS ---
+2025-04-23 15:45:34,683 - ulog_scraper - INFO - Saved post-login page source to logs/post_login_page.html
+2025-04-23 15:45:34,683 - ulog_scraper - INFO - Browser will remain open. You can examine it directly.
+2025-04-23 15:45:34,683 - ulog_scraper - INFO - The script has completed but the browser window will stay open.
+2025-04-23 15:45:34,683 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-23 15:45:34,698 - ulog_scraper - INFO - Spider closed but keeping browser open as requested

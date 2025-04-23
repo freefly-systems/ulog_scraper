@@ -1,0 +1,564 @@
+# Basic imports
+import scrapy
+import time
+import os
+import json
+import logging
+
+# Selenium imports
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+
+class LogDownloaderSpider(scrapy.Spider):
+    """
+    Spider for logging into Auterion Suite and downloading log files.
+    
+    This spider uses Selenium to handle the login process, which involves multiple steps:
+    1. Navigate to the login page
+    2. Click the login button
+    3. Enter email address
+    4. Enter password
+    5. Navigate to the logs page
+    6. Download log files
+    
+    The spider can be configured to keep the browser window open after login for debugging.
+    """
+    name = 'log_downloader'
+    allowed_domains = ['suite.auterion.com']
+    
+    def __init__(self, username=None, password=None, *args, **kwargs):
+        """
+        Initialize the spider with credentials and set up logging and browser.
+        
+        Args:
+            username (str, optional): Auterion Suite username/email. If not provided, 
+                                     will be read from environment variable.
+            password (str, optional): Auterion Suite password. If not provided, 
+                                     will be read from environment variable.
+        """
+        super(LogDownloaderSpider, self).__init__(*args, **kwargs)
+        
+        # Set up file logging FIRST
+        self.setup_logger()
+        
+        # THEN load .env file if dotenv is installed
+        try:
+            from dotenv import load_dotenv
+            load_dotenv()
+            self.log("Loaded .env file")
+        except ImportError:
+            self.log("python-dotenv not installed, skipping .env file loading", logging.WARNING)
+        
+        # Store credentials
+        self.username = username or os.environ.get('AUTERION_USERNAME')
+        self.password = password or os.environ.get('AUTERION_PASSWORD')
+        
+        if not self.username or not self.password:
+            self.log("Username and password must be provided", logging.ERROR)
+            raise ValueError("Username and password must be provided")
+        
+        # Initialize Selenium driver
+        self.driver = webdriver.Chrome()
+        self.log("Selenium driver initialized")
+        
+    def setup_logger(self):
+        """
+        Set up a file logger in addition to the console logger.
+        
+        Creates a logs directory if it doesn't exist and configures a file handler
+        to log messages to logs/scraper.log.
+        """
+        # Create logs directory if it doesn't exist
+        os.makedirs('logs', exist_ok=True)
+        
+        # Set up the file handler
+        file_handler = logging.FileHandler('logs/scraper.log')
+        file_handler.setLevel(logging.INFO)
+        
+        # Set up the formatter
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        
+        # Add the handler to the logger
+        logger = logging.getLogger('ulog_scraper')
+        logger.setLevel(logging.INFO)
+        logger.addHandler(file_handler)
+        
+        # Connect our logger to self.logger
+        self.custom_logger = logger
+        self.logger.info("File logger initialized")
+    
+    def log(self, message, level=logging.INFO):
+        """
+        Log to both Scrapy logger and our custom file logger.
+        
+        Args:
+            message (str): The message to log
+            level (int): The logging level (INFO, WARNING, ERROR)
+        """
+        if level == logging.ERROR:
+            self.logger.error(message)
+            self.custom_logger.error(message)
+        elif level == logging.WARNING:
+            self.logger.warning(message)
+            self.custom_logger.warning(message)
+        else:
+            self.logger.info(message)
+            self.custom_logger.info(message)
+        
+    def closed(self, reason):
+        """
+        Handle spider close event. Keeps browser open if requested.
+        
+        Args:
+            reason (str): Reason for spider closing
+        """
+        if hasattr(self, 'keep_browser_open') and self.keep_browser_open:
+            self.log("Spider closed but keeping browser open as requested")
+            # Do not call self.driver.quit() to keep browser window open
+            # This will ensure the browser stays open after the script finishes
+        else:
+            # Default behavior - close the browser
+            self.driver.quit()
+            self.log(f"Spider closed: {reason}")
+    
+    def start_requests(self):
+        """
+        Start the login process by navigating to the login page.
+        
+        Returns:
+            list: A list of requests to process, or an empty list if we're keeping
+                 the browser open for examination
+        """
+        self.log("Starting login process")
+        
+        try:
+            # Navigate to login page
+            self.driver.get('https://suite.auterion.com/login')
+            self.log("Navigated to login page")
+            
+            # Wait for the page to load
+            time.sleep(5)
+            
+            # Take a screenshot for debugging
+            self.driver.save_screenshot('logs/login_page.png')
+            self.log("Saved screenshot of initial login page")
+            
+            # Attempt to login
+            login_success = self.perform_login()
+            
+            if login_success:
+                self.log("Login successful - keeping browser open for examination")
+                # Set flag to prevent browser from closing when spider finishes
+                self.keep_browser_open = True
+                
+                # Create a file to signal we're keeping the browser open
+                with open('browser_open.txt', 'w') as f:
+                    f.write(f"Browser remains open with session at: {self.driver.current_url}\n")
+                    f.write("Script has finished execution, but browser should remain open.\n")
+                    f.write("Close browser manually when finished examining.")
+                    
+                # Return empty list to let spider finish normally
+                return []
+            
+            # This code will only run if login failed
+            return self.navigate_to_logs()
+            
+        except Exception as e:
+            self.log(f"Login process failed: {str(e)}", logging.ERROR)
+            self.driver.save_screenshot('logs/error_state.png')
+            self.log("Saved error state screenshot", logging.ERROR)
+            # Return empty list to avoid "not iterable" error
+            return []
+    
+    def perform_login(self):
+        """
+        Handle the login process with multiple steps and proper element detection.
+        
+        The login flow consists of:
+        1. Click initial login button
+        2. Find and fill email input field
+        3. Click continue/next button
+        4. Find and fill password field
+        5. Click final submit button
+        6. Wait for successful login
+        
+        Returns:
+            bool: True if login was successful, raises exception otherwise
+        """
+        self.log("Starting multi-step login process")
+        
+        # Step 1: Find and click initial login button on landing page
+        self.log("Step 1: Finding initial login button")
+        try:
+            # Try multiple selectors for the initial login button
+            selectors_to_try = [
+                (By.CSS_SELECTOR, "button.button-primary"),
+                (By.XPATH, "//button[contains(text(), 'Login')]"),
+                (By.XPATH, "//button[normalize-space()='Login']")
+            ]
+            
+            login_button = None
+            for selector_type, selector in selectors_to_try:
+                self.log(f"Trying selector: {selector_type} - {selector}")
+                elements = self.driver.find_elements(selector_type, selector)
+                if elements:
+                    self.log(f"Found {len(elements)} elements with selector {selector}")
+                    login_button = elements[0]
+                    break
+            
+            if not login_button:
+                self.log("Could not find initial login button", logging.ERROR)
+                self.driver.save_screenshot('logs/no_login_button.png')
+                raise Exception("Could not find login button")
+            
+            self.log(f"Found login button: {login_button.text}")
+            login_button.click()
+            self.log("Clicked login button, waiting for email form")
+            
+            # Step 2: Find and fill email field
+            self.log("Step 2: Looking for email input field")
+            email_selectors = [
+                # Specific to "Email address" label
+                (By.XPATH, "//label[contains(text(), 'Email address')]/following::input[1]"),
+                (By.XPATH, "//label[text()='Email address']/following::input[1]"),
+                (By.CSS_SELECTOR, "input[aria-label='Email address']"),
+                (By.CSS_SELECTOR, "input[placeholder='Email address']"),
+                # Common email selectors
+                (By.CSS_SELECTOR, "input[type='email']"),
+                (By.CSS_SELECTOR, "input[name='email']"),
+                (By.CSS_SELECTOR, "input[placeholder*='mail']"),
+                (By.XPATH, "//input[@type='email']"),
+                (By.XPATH, "//input[contains(@placeholder, 'mail')]"),
+                (By.CSS_SELECTOR, "input.email-input"),
+                # The username field (sometimes used for email)
+                (By.CSS_SELECTOR, "input[name='username']"),
+                (By.XPATH, "//input[@name='username']")
+            ]
+            
+            email_input = None
+            for selector_type, selector in email_selectors:
+                self.log(f"Trying to find email field with: {selector_type} - {selector}")
+                try:
+                    elements = self.driver.find_elements(selector_type, selector)
+                    if elements:
+                        email_input = elements[0]
+                        self.log(f"Found email input with selector {selector}")
+                        break
+                except Exception as e:
+                    self.log(f"Error with selector {selector}: {e}")
+            
+            if not email_input:
+                self.log("Could not find email input field, trying to identify all input elements", logging.WARNING)
+                # List all input fields to help debug
+                inputs = self.driver.find_elements(By.TAG_NAME, "input")
+                for i, inp in enumerate(inputs):
+                    try:
+                        input_type = inp.get_attribute("type") or "none"
+                        input_name = inp.get_attribute("name") or "none"
+                        input_placeholder = inp.get_attribute("placeholder") or "none"
+                        self.log(f"Input {i}: type={input_type}, name={input_name}, placeholder={input_placeholder}")
+                    except:
+                        self.log(f"Input {i}: Could not get attributes")
+                
+                raise Exception("Email input field not found")
+            
+            # Enter email
+            self.log("Entering email address")
+            email_input.clear()
+            email_input.send_keys(self.username)
+            
+            # Step 3: Look for continue button after entering email
+            self.log("Looking for continue/next button after email entry")
+            continue_selectors = [
+                (By.CSS_SELECTOR, "button[type='submit']"),
+                (By.XPATH, "//button[contains(text(), 'Continue')]"),
+                (By.XPATH, "//button[contains(text(), 'Next')]"),
+                (By.CSS_SELECTOR, "button.continue-button"),
+                (By.CSS_SELECTOR, "button.next-button")
+            ]
+            
+            continue_button = None
+            for selector_type, selector in continue_selectors:
+                try:
+                    elements = self.driver.find_elements(selector_type, selector)
+                    if elements:
+                        continue_button = elements[0]
+                        self.log(f"Found continue button with selector {selector}")
+                        break
+                except Exception as e:
+                    self.log(f"Error with continue button selector {selector}: {e}")
+            
+            if not continue_button:
+                self.log("No continue button found, trying to submit with Enter key", logging.WARNING)
+                email_input.send_keys(Keys.RETURN)
+            else:
+                continue_button.click()
+                self.log("Clicked continue button")
+            
+            # Step 3: Wait for password field and enter password
+            self.log("Step 3: Waiting for password field")
+            time.sleep(3)
+            self.driver.save_screenshot('logs/after_email_entry.png')
+            
+            # Try to find password field
+            password_selectors = [
+                (By.CSS_SELECTOR, "input[type='password']"),
+                (By.XPATH, "//input[@type='password']"),
+                (By.CSS_SELECTOR, "input[name='password']")
+            ]
+            
+            password_input = None
+            for selector_type, selector in password_selectors:
+                try:
+                    wait = WebDriverWait(self.driver, 5)
+                    password_input = wait.until(EC.presence_of_element_located((selector_type, selector)))
+                    self.log(f"Found password input with selector {selector}")
+                    break
+                except:
+                    self.log(f"Selector {selector} for password field failed")
+            
+            if not password_input:
+                self.log("Could not find password field", logging.ERROR)
+                self.driver.save_screenshot('logs/password_not_found.png')
+                raise Exception("Password field not found")
+            
+            # Enter password
+            self.log("Entering password")
+            password_input.clear()
+            password_input.send_keys(self.password)
+            
+            # Look for login/submit button
+            self.log("Looking for final submit button")
+            submit_selectors = [
+                (By.CSS_SELECTOR, "button[type='submit']"),
+                (By.XPATH, "//button[contains(text(), 'Sign in')]"),
+                (By.XPATH, "//button[contains(text(), 'Login')]"),
+                (By.CSS_SELECTOR, "button.submit-button"),
+                (By.CSS_SELECTOR, "button.login-button")
+            ]
+            
+            submit_button = None
+            for selector_type, selector in submit_selectors:
+                try:
+                    elements = self.driver.find_elements(selector_type, selector)
+                    if elements:
+                        submit_button = elements[0]
+                        self.log(f"Found submit button with selector {selector}")
+                        break
+                except Exception as e:
+                    self.log(f"Error with submit button selector {selector}: {e}")
+            
+            if not submit_button:
+                self.log("No submit button found, trying to submit with Enter key", logging.WARNING)
+                password_input.send_keys(Keys.RETURN)
+            else:
+                submit_button.click()
+                self.log("Clicked submit button")
+            
+            # Wait for successful login with a longer timeout (3 minutes)
+            self.log("Waiting for successful login (up to 3 minutes)")
+            try:
+                # Wait longer as requested - 180 seconds = 3 minutes
+                WebDriverWait(self.driver, 180).until(
+                    lambda driver: 'suite.auterion.com' in driver.current_url and 
+                                  driver.execute_script("return document.readyState") == "complete"
+                )
+                self.log("Login appears successful! Page loaded completely.")
+                
+                # Save detailed state information
+                self.driver.save_screenshot('logs/post_login_state.png')
+                self.log(f"Current URL after login: {self.driver.current_url}")
+                
+                # Print all visible elements on the page
+                self.log("--- LISTING ALL VISIBLE ELEMENTS ON PAGE ---")
+                
+                # Get all elements
+                all_elements = self.driver.find_elements(By.XPATH, "//*")
+                self.log(f"Found {len(all_elements)} total elements on the page")
+                
+                # Print headings and navigation elements first (usually most important)
+                headings = self.driver.find_elements(By.XPATH, "//h1 | //h2 | //h3 | //nav//a | //nav//button")
+                self.log("--- HEADINGS AND NAVIGATION ---")
+                for i, elem in enumerate(headings):
+                    try:
+                        if elem.is_displayed():
+                            tag_name = elem.tag_name
+                            text = elem.text.strip() if elem.text else "(no text)"
+                            element_id = elem.get_attribute("id") or "(no id)"
+                            element_class = elem.get_attribute("class") or "(no class)"
+                            self.log(f"Heading/Nav {i}: <{tag_name}> id='{element_id}' class='{element_class}' text='{text}'")
+                    except:
+                        pass
+                
+                # Print interactive elements (buttons, links, inputs)
+                interactive = self.driver.find_elements(By.XPATH, "//button | //a | //input | //select")
+                self.log("--- INTERACTIVE ELEMENTS ---")
+                for i, elem in enumerate(interactive):
+                    try:
+                        if elem.is_displayed():
+                            tag_name = elem.tag_name
+                            text = elem.text.strip() if elem.text else "(no text)"
+                            element_id = elem.get_attribute("id") or "(no id)"
+                            element_class = elem.get_attribute("class") or "(no class)"
+                            element_href = elem.get_attribute("href") if tag_name == "a" else ""
+                            href_info = f" href='{element_href}'" if element_href else ""
+                            self.log(f"Interactive {i}: <{tag_name}>{href_info} id='{element_id}' class='{element_class}' text='{text}'")
+                    except:
+                        pass
+                
+                # List table data if present (often contains logs and important data)
+                tables = self.driver.find_elements(By.XPATH, "//table")
+                if tables:
+                    self.log("--- TABLE DATA ---")
+                    for t, table in enumerate(tables):
+                        try:
+                            if table.is_displayed():
+                                rows = table.find_elements(By.TAG_NAME, "tr")
+                                self.log(f"Table {t}: Found {len(rows)} rows")
+                                
+                                # Get headers
+                                headers = table.find_elements(By.TAG_NAME, "th")
+                                if headers:
+                                    header_texts = [h.text for h in headers if h.text.strip()]
+                                    self.log(f"Table {t} headers: {' | '.join(header_texts)}")
+                                
+                                # Sample some row data (up to 5 rows)
+                                for i, row in enumerate(rows[:5]):
+                                    cells = row.find_elements(By.TAG_NAME, "td")
+                                    if cells:
+                                        cell_texts = [c.text.strip() for c in cells]
+                                        self.log(f"Table {t}, Row {i}: {' | '.join(cell_texts)}")
+                        except:
+                            pass
+                
+                # Save page source
+                with open('logs/post_login_page.html', 'w', encoding='utf-8') as f:
+                    f.write(self.driver.page_source)
+                self.log("Saved post-login page source to logs/post_login_page.html")
+                
+                # Flag to keep browser open
+                self.keep_browser_open = True
+                
+                # Pause execution (keep browser open)
+                self.log("Browser will remain open. You can examine it directly.")
+                self.log("The script has completed but the browser window will stay open.")
+                
+                # Keep the browser open by returning True
+                return True
+                
+            except Exception as e:
+                self.log(f"Login completion detection failed: {str(e)}", logging.ERROR)
+                self.driver.save_screenshot('logs/login_completion_failure.png')
+                raise Exception(f"Login process failed - could not verify successful page load: {str(e)}")
+            
+        except Exception as e:
+            self.log(f"Error during login process: {str(e)}", logging.ERROR)
+            self.driver.save_screenshot('logs/login_error.png')
+            raise
+    
+    def navigate_to_logs(self):
+        """
+        Navigate to the logs page and extract information.
+        
+        This method is called after successful login to navigate to the logs page
+        and transfer control to Scrapy for downloading log files.
+        
+        Returns:
+            list: Scrapy Request objects for further processing
+        """
+        # Get cookies from Selenium
+        self.log("Getting cookies from browser")
+        selenium_cookies = self.driver.get_cookies()
+        
+        # Navigate to the logs page
+        self.log("Navigating to logs page")
+        self.driver.get('https://suite.auterion.com/logs')
+        time.sleep(3)
+        
+        # Take a screenshot of logs page
+        self.driver.save_screenshot('logs/logs_page.png')
+        self.log("Saved screenshot of logs page")
+        
+        # Extract URL after login
+        log_page_url = self.driver.current_url
+        self.log(f"Logs page URL: {log_page_url}")
+        
+        # Create cookie dictionary for Scrapy
+        cookies_dict = {cookie['name']: cookie['value'] for cookie in selenium_cookies}
+        
+        # Now use Scrapy to continue
+        self.log("Transferring control to Scrapy for further processing")
+        yield scrapy.Request(
+            url=log_page_url,
+            cookies=cookies_dict,
+            callback=self.parse_logs_page,
+            dont_filter=True
+        )
+    
+    def parse_logs_page(self, response):
+        """
+        Process the logs page HTML to find log file links.
+        
+        Args:
+            response (scrapy.Response): The response containing the logs page HTML
+            
+        Yields:
+            scrapy.Request: Requests to download individual log files
+        """
+        # Extract log file links
+        self.log("Processing logs page with Scrapy")
+        
+        # Find all links to log files (adjust selector based on actual HTML)
+        log_links = response.css('a[href*=".log"]::attr(href)').getall()
+        
+        if not log_links:
+            self.log("No log links found. Check the CSS selector.", logging.WARNING)
+        else:
+            self.log(f"Found {len(log_links)} log files")
+        
+        for link in log_links:
+            # Make absolute URL if needed
+            if not link.startswith('http'):
+                link = response.urljoin(link)
+            
+            self.log(f"Requesting log file: {link}")
+            yield scrapy.Request(
+                url=link,
+                callback=self.save_log_file
+            )
+    
+    def save_log_file(self, response):
+        """
+        Save a downloaded log file to disk.
+        
+        Args:
+            response (scrapy.Response): The response containing the log file data
+            
+        Returns:
+            dict: Information about the saved file
+        """
+        # Create logs directory if it doesn't exist
+        os.makedirs('logs/downloaded', exist_ok=True)
+        
+        # Save the log file
+        filename = response.url.split('/')[-1]
+        file_path = f'logs/downloaded/{filename}'
+        
+        with open(file_path, 'wb') as f:
+            f.write(response.body)
+        
+        self.log(f'Saved log file: {filename}')
+        
+        # Return information about the saved file
+        return {
+            'filename': filename,
+            'path': file_path,
+            'url': response.url,
+            'size': len(response.body)
+        }
