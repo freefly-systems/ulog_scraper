@@ -1,280 +1,582 @@
-2025-04-23 15:00:30,162 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:00:33,065 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:00:38,437 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:00:38,437 - ulog_scraper - INFO - Attempting to find and click login button
-2025-04-23 15:00:38,437 - ulog_scraper - INFO - Trying selector: xpath - //button[contains(@class, 'button-primary') and text()='Login']
-2025-04-23 15:00:38,454 - ulog_scraper - INFO - No elements found with selector //button[contains(@class, 'button-primary') and text()='Login']
-2025-04-23 15:00:38,454 - ulog_scraper - INFO - Trying selector: xpath - //button[text()='Login']
-2025-04-23 15:00:38,466 - ulog_scraper - INFO - No elements found with selector //button[text()='Login']
-2025-04-23 15:00:38,466 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:00:38,478 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:00:38,493 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:00:39,323 - ulog_scraper - INFO - Clicked login button
-2025-04-23 15:00:39,323 - ulog_scraper - INFO - Waiting for email input field
-2025-04-23 15:00:49,745 - ulog_scraper - ERROR - Login process failed: Message: 
-Stacktrace:
-#0 0x5f006a1c175a <unknown>
-#1 0x5f0069c744b0 <unknown>
-#2 0x5f0069cc59b3 <unknown>
-#3 0x5f0069cc5ba1 <unknown>
-#4 0x5f0069d141f4 <unknown>
-#5 0x5f0069ceb5bd <unknown>
-#6 0x5f0069d115e0 <unknown>
-#7 0x5f0069ceb363 <unknown>
-#8 0x5f0069cb7d63 <unknown>
-#9 0x5f0069cb89c1 <unknown>
-#10 0x5f006a186a6b <unknown>
-#11 0x5f006a18a951 <unknown>
-#12 0x5f006a16eb62 <unknown>
-#13 0x5f006a18b4c4 <unknown>
-#14 0x5f006a15313f <unknown>
-#15 0x5f006a1af6f8 <unknown>
-#16 0x5f006a1af8d6 <unknown>
-#17 0x5f006a1c05a6 <unknown>
-#18 0x75ab7b894ac3 <unknown>
-
-2025-04-23 15:00:50,955 - ulog_scraper - ERROR - Saved error state screenshot
-2025-04-23 15:03:18,992 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:03:19,667 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:03:19,731 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:03:22,654 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:03:27,932 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:03:27,932 - ulog_scraper - INFO - Attempting to find and click login button
-2025-04-23 15:03:27,932 - ulog_scraper - INFO - Trying selector: xpath - //button[contains(@class, 'button-primary') and text()='Login']
-2025-04-23 15:03:27,943 - ulog_scraper - INFO - No elements found with selector //button[contains(@class, 'button-primary') and text()='Login']
-2025-04-23 15:03:27,943 - ulog_scraper - INFO - Trying selector: xpath - //button[text()='Login']
-2025-04-23 15:03:27,952 - ulog_scraper - INFO - No elements found with selector //button[text()='Login']
-2025-04-23 15:03:27,952 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:03:27,961 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:03:27,973 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:03:28,682 - ulog_scraper - INFO - Clicked login button
-2025-04-23 15:03:28,682 - ulog_scraper - INFO - Waiting for email input field
-2025-04-23 15:03:39,090 - ulog_scraper - ERROR - Login process failed: Message: 
-Stacktrace:
-#0 0x56cbc4a0a75a <unknown>
-#1 0x56cbc44bd4b0 <unknown>
-#2 0x56cbc450e9b3 <unknown>
-#3 0x56cbc450eba1 <unknown>
-#4 0x56cbc455d1f4 <unknown>
-#5 0x56cbc45345bd <unknown>
-#6 0x56cbc455a5e0 <unknown>
-#7 0x56cbc4534363 <unknown>
-#8 0x56cbc4500d63 <unknown>
-#9 0x56cbc45019c1 <unknown>
-#10 0x56cbc49cfa6b <unknown>
-#11 0x56cbc49d3951 <unknown>
-#12 0x56cbc49b7b62 <unknown>
-#13 0x56cbc49d44c4 <unknown>
-#14 0x56cbc499c13f <unknown>
-#15 0x56cbc49f86f8 <unknown>
-#16 0x56cbc49f88d6 <unknown>
-#17 0x56cbc4a095a6 <unknown>
-#18 0x7882f5a94ac3 <unknown>
-
-2025-04-23 15:03:40,262 - ulog_scraper - ERROR - Saved error state screenshot
-2025-04-23 15:05:05,779 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:05:06,363 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:05:06,415 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:05:09,060 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:05:14,327 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:05:14,327 - ulog_scraper - INFO - Attempting to find and click login button
-2025-04-23 15:05:14,327 - ulog_scraper - INFO - Trying selector: xpath - //button[contains(@class, 'button-primary') and text()='Login']
-2025-04-23 15:05:14,338 - ulog_scraper - INFO - No elements found with selector //button[contains(@class, 'button-primary') and text()='Login']
-2025-04-23 15:05:14,338 - ulog_scraper - INFO - Trying selector: xpath - //button[text()='Login']
-2025-04-23 15:05:14,346 - ulog_scraper - INFO - No elements found with selector //button[text()='Login']
-2025-04-23 15:05:14,346 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:05:14,354 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:05:14,366 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:05:15,060 - ulog_scraper - INFO - Clicked login button
-2025-04-23 15:05:15,060 - ulog_scraper - INFO - Waiting for email input field
-2025-04-23 15:05:25,485 - ulog_scraper - ERROR - Login process failed: Message: 
-Stacktrace:
-#0 0x5c3166f2675a <unknown>
-#1 0x5c31669d94b0 <unknown>
-#2 0x5c3166a2a9b3 <unknown>
-#3 0x5c3166a2aba1 <unknown>
-#4 0x5c3166a791f4 <unknown>
-#5 0x5c3166a505bd <unknown>
-#6 0x5c3166a765e0 <unknown>
-#7 0x5c3166a50363 <unknown>
-#8 0x5c3166a1cd63 <unknown>
-#9 0x5c3166a1d9c1 <unknown>
-#10 0x5c3166eeba6b <unknown>
-#11 0x5c3166eef951 <unknown>
-#12 0x5c3166ed3b62 <unknown>
-#13 0x5c3166ef04c4 <unknown>
-#14 0x5c3166eb813f <unknown>
-#15 0x5c3166f146f8 <unknown>
-#16 0x5c3166f148d6 <unknown>
-#17 0x5c3166f255a6 <unknown>
-#18 0x70070d694ac3 <unknown>
-
-2025-04-23 15:05:26,337 - ulog_scraper - ERROR - Saved error state screenshot
-2025-04-23 15:18:46,305 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:18:46,885 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:18:46,946 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:18:49,813 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:18:55,082 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:18:55,082 - ulog_scraper - INFO - Starting multi-step login process
-2025-04-23 15:18:55,082 - ulog_scraper - INFO - Step 1: Finding initial login button
-2025-04-23 15:18:55,082 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:18:55,091 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:18:55,101 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:18:55,833 - ulog_scraper - INFO - Clicked login button, waiting for email form
-2025-04-23 15:18:55,834 - ulog_scraper - INFO - Step 2: Looking for email input field
-2025-04-23 15:18:59,590 - ulog_scraper - INFO - Trying to find email field with: css selector - input[type='email']
-2025-04-23 15:18:59,601 - ulog_scraper - INFO - Trying to find email field with: css selector - input[name='email']
-2025-04-23 15:18:59,612 - ulog_scraper - INFO - Trying to find email field with: css selector - input[placeholder*='mail']
-2025-04-23 15:18:59,620 - ulog_scraper - INFO - Trying to find email field with: xpath - //input[@type='email']
-2025-04-23 15:18:59,628 - ulog_scraper - INFO - Trying to find email field with: xpath - //input[contains(@placeholder, 'mail')]
-2025-04-23 15:18:59,637 - ulog_scraper - INFO - Trying to find email field with: css selector - input.email-input
-2025-04-23 15:18:59,646 - ulog_scraper - WARNING - Could not find email input field, trying to identify all input elements
-2025-04-23 15:18:59,679 - ulog_scraper - INFO - Input 0: type=hidden, name=state, placeholder=
-2025-04-23 15:18:59,689 - ulog_scraper - INFO - Input 1: type=text, name=username, placeholder=
-2025-04-23 15:18:59,702 - ulog_scraper - INFO - Input 2: type=password, name=, placeholder=
-2025-04-23 15:18:59,719 - ulog_scraper - INFO - Input 3: type=hidden, name=js-available, placeholder=
-2025-04-23 15:18:59,727 - ulog_scraper - INFO - Input 4: type=hidden, name=webauthn-available, placeholder=
-2025-04-23 15:18:59,743 - ulog_scraper - INFO - Input 5: type=hidden, name=is-brave, placeholder=
-2025-04-23 15:18:59,755 - ulog_scraper - INFO - Input 6: type=hidden, name=webauthn-platform-available, placeholder=
-2025-04-23 15:18:59,755 - ulog_scraper - ERROR - Error during login process: Email input field not found
-2025-04-23 15:19:00,589 - ulog_scraper - ERROR - Login process failed: Email input field not found
-2025-04-23 15:19:01,374 - ulog_scraper - ERROR - Saved error state screenshot
-2025-04-23 15:19:01,447 - ulog_scraper - INFO - Spider closed: finished
-2025-04-23 15:27:38,496 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:27:39,142 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:27:39,200 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:27:41,798 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:27:47,065 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:27:47,065 - ulog_scraper - INFO - Starting multi-step login process
-2025-04-23 15:27:47,065 - ulog_scraper - INFO - Step 1: Finding initial login button
-2025-04-23 15:27:47,065 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:27:47,074 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:27:47,084 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:27:47,809 - ulog_scraper - INFO - Clicked login button, waiting for email form
-2025-04-23 15:27:47,809 - ulog_scraper - INFO - Step 2: Looking for email input field
-2025-04-23 15:27:51,555 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:27:51,569 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:27:51,569 - ulog_scraper - INFO - Entering email address
-2025-04-23 15:27:51,623 - ulog_scraper - INFO - Looking for continue/next button after email entry
-2025-04-23 15:27:51,644 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
-2025-04-23 15:27:52,360 - ulog_scraper - INFO - Clicked continue button
-2025-04-23 15:27:52,360 - ulog_scraper - INFO - Step 3: Waiting for password field
-2025-04-23 15:27:56,206 - ulog_scraper - INFO - Found password input with selector input[type='password']
-2025-04-23 15:27:56,206 - ulog_scraper - INFO - Entering password
-2025-04-23 15:27:56,240 - ulog_scraper - INFO - Looking for final submit button
-2025-04-23 15:27:56,254 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
-2025-04-23 15:27:58,076 - ulog_scraper - INFO - Clicked submit button
-2025-04-23 15:27:58,076 - ulog_scraper - INFO - Waiting for successful login
-2025-04-23 15:27:58,084 - ulog_scraper - INFO - Successfully logged in!
-2025-04-23 15:27:58,090 - ulog_scraper - INFO - Getting cookies from browser
-2025-04-23 15:27:58,094 - ulog_scraper - INFO - Navigating to logs page
-2025-04-23 15:28:01,675 - ulog_scraper - INFO - Saved screenshot of logs page
-2025-04-23 15:28:01,679 - ulog_scraper - INFO - Logs page URL: https://suite.auterion.com/login
-2025-04-23 15:28:01,679 - ulog_scraper - INFO - Transferring control to Scrapy for further processing
-2025-04-23 15:28:02,304 - ulog_scraper - INFO - Processing logs page with Scrapy
-2025-04-23 15:28:02,304 - ulog_scraper - WARNING - No log links found. Check the CSS selector.
-2025-04-23 15:28:02,385 - ulog_scraper - INFO - Spider closed: finished
-2025-04-23 15:31:44,288 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:31:44,863 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:31:44,911 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:31:47,541 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:31:52,807 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:31:52,807 - ulog_scraper - INFO - Starting multi-step login process
-2025-04-23 15:31:52,807 - ulog_scraper - INFO - Step 1: Finding initial login button
-2025-04-23 15:31:52,807 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:31:52,817 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:31:52,827 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:31:53,614 - ulog_scraper - INFO - Clicked login button, waiting for email form
-2025-04-23 15:31:53,615 - ulog_scraper - INFO - Step 2: Looking for email input field
-2025-04-23 15:31:57,431 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:31:57,446 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:31:57,446 - ulog_scraper - INFO - Entering email address
-2025-04-23 15:31:57,527 - ulog_scraper - INFO - Looking for continue/next button after email entry
-2025-04-23 15:31:57,545 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
-2025-04-23 15:31:58,172 - ulog_scraper - INFO - Clicked continue button
-2025-04-23 15:31:58,172 - ulog_scraper - INFO - Step 3: Waiting for password field
-2025-04-23 15:32:01,947 - ulog_scraper - INFO - Found password input with selector input[type='password']
-2025-04-23 15:32:01,947 - ulog_scraper - INFO - Entering password
-2025-04-23 15:32:01,980 - ulog_scraper - INFO - Looking for final submit button
-2025-04-23 15:32:01,987 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
-2025-04-23 15:32:03,927 - ulog_scraper - INFO - Clicked submit button
-2025-04-23 15:32:03,927 - ulog_scraper - INFO - Waiting for successful login
-2025-04-23 15:32:03,932 - ulog_scraper - INFO - Login appears successful!
-2025-04-23 15:32:04,169 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=oCv7aoYgRc2DGELtLm3Vv4HhyIScMaGGa5gzFo38h_pWX&state=OVVjNTN0bTV3NXNQck00bDhNOH5vdXNnMnBIRHExcXBCdk4xeHFJRnhWRw%3D%3D
-2025-04-23 15:32:04,173 - ulog_scraper - INFO - Saved post-login page source to logs/post_login_page.html
-2025-04-23 15:32:04,173 - ulog_scraper - INFO - Pausing execution to examine browser state. Browser will remain open.
-2025-04-23 15:32:04,173 - ulog_scraper - INFO - Check the saved screenshots and HTML in the logs directory.
-2025-04-23 15:32:04,173 - ulog_scraper - INFO - Login successful - pausing execution to examine state
-2025-04-23 15:32:04,255 - ulog_scraper - INFO - Spider closed: finished
-2025-04-23 15:39:22,692 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:39:23,328 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:39:23,388 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:39:25,538 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:39:30,795 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:39:30,796 - ulog_scraper - INFO - Starting multi-step login process
-2025-04-23 15:39:30,796 - ulog_scraper - INFO - Step 1: Finding initial login button
-2025-04-23 15:39:30,796 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:39:30,805 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:39:30,816 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:39:31,383 - ulog_scraper - INFO - Clicked login button, waiting for email form
-2025-04-23 15:39:31,384 - ulog_scraper - INFO - Step 2: Looking for email input field
-2025-04-23 15:39:35,166 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:39:35,180 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:39:35,180 - ulog_scraper - INFO - Entering email address
-2025-04-23 15:39:35,239 - ulog_scraper - INFO - Looking for continue/next button after email entry
-2025-04-23 15:39:35,256 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
-2025-04-23 15:39:36,296 - ulog_scraper - INFO - Clicked continue button
-2025-04-23 15:39:36,296 - ulog_scraper - INFO - Step 3: Waiting for password field
-2025-04-23 15:39:40,102 - ulog_scraper - INFO - Found password input with selector input[type='password']
-2025-04-23 15:39:40,103 - ulog_scraper - INFO - Entering password
-2025-04-23 15:39:40,135 - ulog_scraper - INFO - Looking for final submit button
-2025-04-23 15:39:40,143 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
-2025-04-23 15:39:42,018 - ulog_scraper - INFO - Clicked submit button
-2025-04-23 15:39:42,018 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
-2025-04-23 15:39:42,029 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
-2025-04-23 15:39:42,257 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=H0SKplVgB_5hVqr70Ibt--z35iHZYqd1YZzetwOCSIv1U&state=Vi4yeFY3OFVWVUpHOHpqRUJFalhqSy1xdU9pemhnSlAxZHIxS0hsdC1jVA%3D%3D
-2025-04-23 15:39:42,257 - ulog_scraper - INFO - --- LISTING ALL VISIBLE ELEMENTS ON PAGE ---
-2025-04-23 15:39:42,270 - ulog_scraper - INFO - Found 61 total elements on the page
-2025-04-23 15:39:42,282 - ulog_scraper - INFO - --- HEADINGS AND NAVIGATION ---
-2025-04-23 15:39:42,299 - ulog_scraper - INFO - --- INTERACTIVE ELEMENTS ---
-2025-04-23 15:39:42,345 - ulog_scraper - INFO - Saved post-login page source to logs/post_login_page.html
-2025-04-23 15:39:42,346 - ulog_scraper - INFO - Browser will remain open. You can examine it directly.
-2025-04-23 15:39:42,346 - ulog_scraper - INFO - The script has completed but the browser window will stay open.
-2025-04-23 15:39:42,346 - ulog_scraper - INFO - Login successful - keeping browser open for examination
-2025-04-23 15:39:42,359 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
-2025-04-23 15:45:17,744 - ulog_scraper - INFO - Loaded .env file
-2025-04-23 15:45:18,340 - ulog_scraper - INFO - Selenium driver initialized
-2025-04-23 15:45:18,396 - ulog_scraper - INFO - Starting login process
-2025-04-23 15:45:21,264 - ulog_scraper - INFO - Navigated to login page
-2025-04-23 15:45:26,542 - ulog_scraper - INFO - Saved screenshot of initial login page
-2025-04-23 15:45:26,542 - ulog_scraper - INFO - Starting multi-step login process
-2025-04-23 15:45:26,542 - ulog_scraper - INFO - Step 1: Finding initial login button
-2025-04-23 15:45:26,542 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
-2025-04-23 15:45:26,551 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
-2025-04-23 15:45:26,562 - ulog_scraper - INFO - Found login button: Login
-2025-04-23 15:45:27,523 - ulog_scraper - INFO - Clicked login button, waiting for email form
-2025-04-23 15:45:27,524 - ulog_scraper - INFO - Step 2: Looking for email input field
-2025-04-23 15:45:27,524 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:45:27,539 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
-2025-04-23 15:45:27,539 - ulog_scraper - INFO - Entering email address
-2025-04-23 15:45:27,731 - ulog_scraper - INFO - Looking for continue/next button after email entry
-2025-04-23 15:45:27,743 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
-2025-04-23 15:45:28,333 - ulog_scraper - INFO - Clicked continue button
-2025-04-23 15:45:28,333 - ulog_scraper - INFO - Step 3: Waiting for password field
-2025-04-23 15:45:32,120 - ulog_scraper - INFO - Found password input with selector input[type='password']
-2025-04-23 15:45:32,121 - ulog_scraper - INFO - Entering password
-2025-04-23 15:45:32,156 - ulog_scraper - INFO - Looking for final submit button
-2025-04-23 15:45:32,164 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
-2025-04-23 15:45:34,366 - ulog_scraper - INFO - Clicked submit button
-2025-04-23 15:45:34,366 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
-2025-04-23 15:45:34,375 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
-2025-04-23 15:45:34,565 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=ouk8AVDpm1bkO0lPcypq_X92CKAyEpOU2YHIyUbvswVZo&state=U1NfeXNWeWlVMXMzUzEteUgyWXFaTWZOWmNtN0p4VG5fMVZmM3pIV0ZoSQ%3D%3D
-2025-04-23 15:45:34,565 - ulog_scraper - INFO - --- LISTING ALL VISIBLE ELEMENTS ON PAGE ---
-2025-04-23 15:45:34,583 - ulog_scraper - INFO - Found 60 total elements on the page
-2025-04-23 15:45:34,593 - ulog_scraper - INFO - --- HEADINGS AND NAVIGATION ---
-2025-04-23 15:45:34,604 - ulog_scraper - INFO - --- INTERACTIVE ELEMENTS ---
-2025-04-23 15:45:34,683 - ulog_scraper - INFO - Saved post-login page source to logs/post_login_page.html
-2025-04-23 15:45:34,683 - ulog_scraper - INFO - Browser will remain open. You can examine it directly.
-2025-04-23 15:45:34,683 - ulog_scraper - INFO - The script has completed but the browser window will stay open.
-2025-04-23 15:45:34,683 - ulog_scraper - INFO - Login successful - keeping browser open for examination
-2025-04-23 15:45:34,698 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-23 16:28:54,381 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 16:28:55,041 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 16:28:55,096 - ulog_scraper - INFO - Starting login process
+2025-04-23 16:28:57,539 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 16:29:02,926 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 16:29:02,926 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 16:29:02,926 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 16:29:02,926 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 16:29:02,942 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 16:29:02,957 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 16:29:03,746 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 16:29:03,746 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 16:29:03,747 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 16:29:03,791 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 16:29:03,791 - ulog_scraper - INFO - Entering email address
+2025-04-23 16:29:03,956 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 16:29:03,979 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 16:29:04,586 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 16:29:04,587 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 16:29:08,431 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 16:29:08,431 - ulog_scraper - INFO - Entering password
+2025-04-23 16:29:08,466 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 16:29:08,472 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 16:29:10,300 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 16:29:10,300 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-23 16:29:10,311 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-23 16:29:10,547 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=CuA5St1zu8ynVG5tfn9FD5qTrSGdkoJiVWZskeBWuLZYk&state=MVdwY0lsUEcucHhYY1RrdHFZQkRyR2F%2BSmh4Si44SGNOcTZ3UzdrQVUtSg%3D%3D
+2025-04-23 16:29:10,548 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-23 16:29:10,548 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-23 16:29:15,807 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-23 16:29:16,559 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-23 16:29:21,809 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-23 16:29:21,812 - ulog_scraper - INFO - Navigation complete - checking if we reached the Vehicles page
+2025-04-23 16:29:21,814 - ulog_scraper - INFO - Successfully reached Vehicles page
+2025-04-23 16:29:21,814 - ulog_scraper - INFO - --- VEHICLES PAGE CONTENT ---
+2025-04-23 16:29:21,817 - ulog_scraper - INFO - Page title: Auterion Suite
+2025-04-23 16:29:21,830 - ulog_scraper - INFO - Found 18 headings on the page
+2025-04-23 16:29:21,853 - ulog_scraper - INFO - Heading 0: Vehicles
+2025-04-23 16:29:21,869 - ulog_scraper - INFO - Heading 1: Vehicle Groups
+2025-04-23 16:29:21,889 - ulog_scraper - INFO - Heading 2: All vehicles
+2025-04-23 16:29:21,908 - ulog_scraper - INFO - Heading 3: Eng Bench
+2025-04-23 16:29:21,923 - ulog_scraper - INFO - Heading 4: Eng Flight
+2025-04-23 16:29:21,948 - ulog_scraper - INFO - Heading 5: Florida Forest Service
+2025-04-23 16:29:21,960 - ulog_scraper - INFO - Heading 6: HQ
+2025-04-23 16:29:21,985 - ulog_scraper - INFO - Heading 7: Matt's Fleet
+2025-04-23 16:29:21,999 - ulog_scraper - INFO - Heading 8: Old mission Go units
+2025-04-23 16:29:22,019 - ulog_scraper - INFO - Heading 9: Radio Doodle
+2025-04-23 16:29:22,033 - ulog_scraper - INFO - Heading 10: Radio Herelink 1.0
+2025-04-23 16:29:22,051 - ulog_scraper - INFO - Heading 11: Radio Herelink 1.1
+2025-04-23 16:29:22,070 - ulog_scraper - INFO - Heading 12: USFS
+2025-04-23 16:29:22,086 - ulog_scraper - INFO - Heading 13: Archived Vehicles
+2025-04-23 16:29:22,108 - ulog_scraper - INFO - Heading 14: Transferred Vehicles
+2025-04-23 16:29:22,119 - ulog_scraper - INFO - Heading 15: New group
+2025-04-23 16:29:22,142 - ulog_scraper - INFO - Heading 16: All Vehicles
+2025-04-23 16:29:22,164 - ulog_scraper - INFO - Found 0 vehicle elements
+2025-04-23 16:29:22,187 - ulog_scraper - INFO - Found 1 tables
+2025-04-23 16:29:22,273 - ulog_scraper - INFO - Table 0: Found 173 rows
+2025-04-23 16:29:22,405 - ulog_scraper - INFO - Table 0 headers: Vehicle | State | Assets | Last Pilot | Last Flight Status
+2025-04-23 16:29:22,482 - ulog_scraper - INFO - Vehicle 1: Astro - 10911F32 | READY | 1 | Unknown pilot | HEALTHY
+2025-04-23 16:29:22,548 - ulog_scraper - INFO - Vehicle 2: Astro - 109A0951 | READY | 1 | Unknown pilot | HEALTHY
+2025-04-23 16:29:22,605 - ulog_scraper - INFO - Vehicle 3: Astro - 10903B49 | READY | 1 | Unknown pilot | CRITICAL
+2025-04-23 16:29:22,676 - ulog_scraper - INFO - Vehicle 4: Astro - 109115DD | READY | 1 | Unknown pilot | HEALTHY
+2025-04-23 16:29:22,740 - ulog_scraper - INFO - Vehicle 5: Astro - 109E5B83 | READY | 1 | Unknown pilot | HEALTHY
+2025-04-23 16:29:22,839 - ulog_scraper - INFO - Vehicle 6: Astro - 109B3A63 | READY | 0 | Unknown pilot | HEALTHY
+2025-04-23 16:29:22,916 - ulog_scraper - INFO - Vehicle 7: Astro - 109C6E4E | READY | 1 | Unknown pilot | HEALTHY
+2025-04-23 16:29:22,986 - ulog_scraper - INFO - Vehicle 8: Astro - 109150C0 | READY | 1 | Unknown pilot | CRITICAL
+2025-04-23 16:29:23,047 - ulog_scraper - INFO - Vehicle 9: Astro - 1096B1B0 | READY | 1 | Unknown pilot | HEALTHY
+2025-04-23 16:29:23,182 - ulog_scraper - INFO - Saved Vehicles page source to logs/vehicles_page.html
+2025-04-23 16:29:23,182 - ulog_scraper - INFO - --- LISTING ALL VISIBLE ELEMENTS ON PAGE ---
+2025-04-23 16:29:23,432 - ulog_scraper - INFO - Found 4444 total elements on the page
+2025-04-23 16:29:23,444 - ulog_scraper - INFO - --- HEADINGS AND NAVIGATION ---
+2025-04-23 16:29:23,471 - ulog_scraper - INFO - Heading/Nav 0: <h1> id='(no id)' class='pt-2 flex-grow mt-2' text='Vehicles'
+2025-04-23 16:29:23,511 - ulog_scraper - INFO - Heading/Nav 1: <h3> id='(no id)' class='mr-2' text='Vehicle Groups'
+2025-04-23 16:29:23,559 - ulog_scraper - INFO - Heading/Nav 2: <h3> id='(no id)' class='(no class)' text='All vehicles'
+2025-04-23 16:29:23,598 - ulog_scraper - INFO - Heading/Nav 3: <h3> id='(no id)' class='(no class)' text='Eng Bench'
+2025-04-23 16:29:23,639 - ulog_scraper - INFO - Heading/Nav 4: <h3> id='(no id)' class='(no class)' text='Eng Flight'
+2025-04-23 16:29:23,682 - ulog_scraper - INFO - Heading/Nav 5: <h3> id='(no id)' class='(no class)' text='Florida Forest Service'
+2025-04-23 16:29:23,732 - ulog_scraper - INFO - Heading/Nav 6: <h3> id='(no id)' class='(no class)' text='HQ'
+2025-04-23 16:29:23,780 - ulog_scraper - INFO - Heading/Nav 7: <h3> id='(no id)' class='(no class)' text='Matt's Fleet'
+2025-04-23 16:29:23,825 - ulog_scraper - INFO - Heading/Nav 8: <h3> id='(no id)' class='(no class)' text='Old mission Go units'
+2025-04-23 16:29:23,867 - ulog_scraper - INFO - Heading/Nav 9: <h3> id='(no id)' class='(no class)' text='Radio Doodle'
+2025-04-23 16:29:23,911 - ulog_scraper - INFO - Heading/Nav 10: <h3> id='(no id)' class='(no class)' text='Radio Herelink 1.0'
+2025-04-23 16:29:23,949 - ulog_scraper - INFO - Heading/Nav 11: <h3> id='(no id)' class='(no class)' text='Radio Herelink 1.1'
+2025-04-23 16:29:23,991 - ulog_scraper - INFO - Heading/Nav 12: <h3> id='(no id)' class='(no class)' text='USFS'
+2025-04-23 16:29:24,071 - ulog_scraper - INFO - Heading/Nav 13: <h3> id='(no id)' class='(no class)' text='Archived Vehicles'
+2025-04-23 16:29:24,119 - ulog_scraper - INFO - Heading/Nav 14: <h3> id='(no id)' class='(no class)' text='Transferred Vehicles'
+2025-04-23 16:29:24,163 - ulog_scraper - INFO - Heading/Nav 15: <h3> id='(no id)' class='mb-16' text='New group'
+2025-04-23 16:29:24,202 - ulog_scraper - INFO - Heading/Nav 16: <h3> id='(no id)' class='(no class)' text='All Vehicles'
+2025-04-23 16:29:24,262 - ulog_scraper - INFO - --- INTERACTIVE ELEMENTS ---
+2025-04-23 16:29:24,297 - ulog_scraper - INFO - Interactive 0: <a> href='https://suite.auterion.com/' id='(no id)' class='flex items-center gap-2 cursor-pointer' text='(no text)'
+2025-04-23 16:29:24,339 - ulog_scraper - INFO - Interactive 2: <a> href='https://suite.auterion.com/' id='(no id)' class='nav-item !px-2.5 mx-3 mb-3' text='(no text)'
+2025-04-23 16:29:24,474 - ulog_scraper - INFO - Interactive 20: <a> href='https://suite.auterion.com/settings' id='(no id)' class='nav-item !px-2.5 mx-3' text='(no text)'
+2025-04-23 16:29:24,513 - ulog_scraper - INFO - Interactive 21: <a> href='https://suite.auterion.com/help' id='(no id)' class='nav-item !px-2.5 mx-3' text='(no text)'
+2025-04-23 16:29:24,553 - ulog_scraper - INFO - Interactive 22: <a> href='https://suite.auterion.com/profile' id='(no id)' class='flex items-center gap-2 nav-item !px-2.5 mx-3' text='(no text)'
+2025-04-23 16:29:24,593 - ulog_scraper - INFO - Interactive 23: <a> id='(no id)' class='nav-link' text='(no text)'
+2025-04-23 16:29:24,684 - ulog_scraper - INFO - Interactive 24: <a> href='https://suite.auterion.com/vehicles/fleet?activationState=unactivated' id='(no id)' class='group font-bold hover:text-[#141109]' text='Activate'
+2025-04-23 16:29:24,738 - ulog_scraper - INFO - Interactive 25: <a> href='https://suite.auterion.com/vehicles/activate?process=amc' id='(no id)' class='group font-bold hover:text-[#141109]' text='Read More'
+2025-04-23 16:29:24,770 - ulog_scraper - INFO - Interactive 26: <input> id='(no id)' class='(no class)' text='(no text)'
+2025-04-23 16:29:24,806 - ulog_scraper - INFO - Interactive 27: <a> href='https://suite.auterion.com/vehicles?action=manageLive' id='(no id)' class='router-link-active router-link-exact-active button-default whitespace-nowrap mt-2 mr-2' text='Live Streams'
+2025-04-23 16:29:24,851 - ulog_scraper - INFO - Interactive 28: <a> href='https://suite.auterion.com/vehicles/activate?process=amc' id='(no id)' class='button-primary whitespace-nowrap mt-2 mr-2' text='Activate Vehicle'
+2025-04-23 16:29:24,902 - ulog_scraper - INFO - Interactive 29: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='All vehicles
+172 vehicles
+164
+0
+5
+3'
+2025-04-23 16:29:24,959 - ulog_scraper - INFO - Interactive 30: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Eng Bench
+5 vehicles
+5
+0
+0
+0'
+2025-04-23 16:29:25,035 - ulog_scraper - INFO - Interactive 34: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Eng Flight
+12 vehicles
+9
+0
+2
+1'
+2025-04-23 16:29:25,117 - ulog_scraper - INFO - Interactive 38: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Florida Forest Service
+0 vehicles
+0
+0
+0
+0'
+2025-04-23 16:29:25,189 - ulog_scraper - INFO - Interactive 42: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='HQ
+20 vehicles
+16
+0
+3
+1'
+2025-04-23 16:29:25,293 - ulog_scraper - INFO - Interactive 46: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Matt's Fleet
+5 vehicles
+4
+0
+1
+0'
+2025-04-23 16:29:25,378 - ulog_scraper - INFO - Interactive 50: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Old mission Go units
+26 vehicles
+24
+0
+0
+2'
+2025-04-23 16:29:25,455 - ulog_scraper - INFO - Interactive 54: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Radio Doodle
+4 vehicles
+4
+0
+0
+0'
+2025-04-23 16:29:25,528 - ulog_scraper - INFO - Interactive 58: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Radio Herelink 1.0
+2 vehicles
+1
+0
+0
+1'
+2025-04-23 16:29:25,607 - ulog_scraper - INFO - Interactive 62: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Radio Herelink 1.1
+4 vehicles
+2
+0
+2
+0'
+2025-04-23 16:29:25,734 - ulog_scraper - INFO - Interactive 66: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='USFS
+58 vehicles
+58
+0
+0
+0'
+2025-04-23 16:29:25,809 - ulog_scraper - INFO - Interactive 70: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Archived Vehicles
+56 vehicles
+53
+0
+3
+0'
+2025-04-23 16:29:25,923 - ulog_scraper - INFO - Interactive 71: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border border-gray-200' text='Transferred Vehicles
+15 vehicles'
+2025-04-23 16:29:25,980 - ulog_scraper - INFO - Interactive 72: <a> id='(no id)' class='flex flex-col rounded pb-6 hover:bg-gray-50 cursor-pointer border-2 border-dashed border-gray-300' text='New group'
+2025-04-23 16:29:26,015 - ulog_scraper - INFO - Interactive 73: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,070 - ulog_scraper - INFO - Interactive 74: <a> href='https://suite.auterion.com/vehicles/17838' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10911F32'
+2025-04-23 16:29:26,121 - ulog_scraper - INFO - Interactive 75: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17838' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:26,152 - ulog_scraper - INFO - Interactive 76: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,208 - ulog_scraper - INFO - Interactive 77: <a> href='https://suite.auterion.com/vehicles/17833' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109A0951'
+2025-04-23 16:29:26,262 - ulog_scraper - INFO - Interactive 78: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17833' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:26,301 - ulog_scraper - INFO - Interactive 79: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,364 - ulog_scraper - INFO - Interactive 80: <a> href='https://suite.auterion.com/vehicles/17837' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10903B49'
+2025-04-23 16:29:26,418 - ulog_scraper - INFO - Interactive 81: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17837' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:26,476 - ulog_scraper - INFO - Interactive 82: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,538 - ulog_scraper - INFO - Interactive 83: <a> href='https://suite.auterion.com/vehicles/17834' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109115DD'
+2025-04-23 16:29:26,596 - ulog_scraper - INFO - Interactive 84: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17834' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:26,627 - ulog_scraper - INFO - Interactive 85: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,677 - ulog_scraper - INFO - Interactive 86: <a> href='https://suite.auterion.com/vehicles/17830' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109E5B83'
+2025-04-23 16:29:26,720 - ulog_scraper - INFO - Interactive 87: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17830' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:26,748 - ulog_scraper - INFO - Interactive 88: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,794 - ulog_scraper - INFO - Interactive 89: <a> href='https://suite.auterion.com/vehicles/17836' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109B3A63'
+2025-04-23 16:29:26,837 - ulog_scraper - INFO - Interactive 90: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17836' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:26,869 - ulog_scraper - INFO - Interactive 91: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:26,918 - ulog_scraper - INFO - Interactive 92: <a> href='https://suite.auterion.com/vehicles/17832' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109C6E4E'
+2025-04-23 16:29:26,963 - ulog_scraper - INFO - Interactive 93: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17832' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:26,990 - ulog_scraper - INFO - Interactive 94: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,064 - ulog_scraper - INFO - Interactive 95: <a> href='https://suite.auterion.com/vehicles/17820' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109150C0'
+2025-04-23 16:29:27,108 - ulog_scraper - INFO - Interactive 96: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17820' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:27,145 - ulog_scraper - INFO - Interactive 97: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,194 - ulog_scraper - INFO - Interactive 98: <a> href='https://suite.auterion.com/vehicles/17829' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1096B1B0'
+2025-04-23 16:29:27,244 - ulog_scraper - INFO - Interactive 99: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=17829' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:27,277 - ulog_scraper - INFO - Interactive 100: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,340 - ulog_scraper - INFO - Interactive 101: <a> href='https://suite.auterion.com/vehicles/5525' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109F18E4'
+2025-04-23 16:29:27,407 - ulog_scraper - INFO - Interactive 102: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=5525' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:27,437 - ulog_scraper - INFO - Interactive 103: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,522 - ulog_scraper - INFO - Interactive 104: <a> href='https://suite.auterion.com/vehicles/16392' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1095286A'
+2025-04-23 16:29:27,555 - ulog_scraper - INFO - Interactive 105: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16392' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:27,588 - ulog_scraper - INFO - Interactive 106: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,669 - ulog_scraper - INFO - Interactive 107: <a> href='https://suite.auterion.com/vehicles/8584' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109B417B'
+2025-04-23 16:29:27,714 - ulog_scraper - INFO - Interactive 108: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=8584' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:27,750 - ulog_scraper - INFO - Interactive 109: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,797 - ulog_scraper - INFO - Interactive 110: <a> href='https://suite.auterion.com/vehicles/16396' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10932F3B'
+2025-04-23 16:29:27,845 - ulog_scraper - INFO - Interactive 111: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16396' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:27,881 - ulog_scraper - INFO - Interactive 112: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:27,934 - ulog_scraper - INFO - Interactive 113: <a> href='https://suite.auterion.com/vehicles/16486' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109A20D3'
+2025-04-23 16:29:27,991 - ulog_scraper - INFO - Interactive 114: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16486' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:28,032 - ulog_scraper - INFO - Interactive 115: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,085 - ulog_scraper - INFO - Interactive 116: <a> href='https://suite.auterion.com/vehicles/16400' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109CF5EE'
+2025-04-23 16:29:28,143 - ulog_scraper - INFO - Interactive 117: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16400' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:28,182 - ulog_scraper - INFO - Interactive 118: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,284 - ulog_scraper - INFO - Interactive 119: <a> href='https://suite.auterion.com/vehicles/16382' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1090D071'
+2025-04-23 16:29:28,315 - ulog_scraper - INFO - Interactive 120: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16382' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:28,348 - ulog_scraper - INFO - Interactive 121: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,396 - ulog_scraper - INFO - Interactive 122: <a> href='https://suite.auterion.com/vehicles/16438' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1096D5DB'
+2025-04-23 16:29:28,443 - ulog_scraper - INFO - Interactive 123: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16438' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:28,475 - ulog_scraper - INFO - Interactive 124: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,524 - ulog_scraper - INFO - Interactive 125: <a> href='https://suite.auterion.com/vehicles/16455' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109A2BD6'
+2025-04-23 16:29:28,578 - ulog_scraper - INFO - Interactive 126: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16455' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:28,612 - ulog_scraper - INFO - Interactive 127: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,663 - ulog_scraper - INFO - Interactive 128: <a> href='https://suite.auterion.com/vehicles/14107' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109AC98A'
+2025-04-23 16:29:28,711 - ulog_scraper - INFO - Interactive 129: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=14107' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:28,743 - ulog_scraper - INFO - Interactive 130: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,789 - ulog_scraper - INFO - Interactive 131: <a> href='https://suite.auterion.com/vehicles/16371' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1092910B'
+2025-04-23 16:29:28,870 - ulog_scraper - INFO - Interactive 132: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=16371' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:28,903 - ulog_scraper - INFO - Interactive 133: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:28,951 - ulog_scraper - INFO - Interactive 134: <a> href='https://suite.auterion.com/vehicles/5979' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1099CA65'
+2025-04-23 16:29:29,010 - ulog_scraper - INFO - Interactive 135: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=5979' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,040 - ulog_scraper - INFO - Interactive 136: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,088 - ulog_scraper - INFO - Interactive 137: <a> href='https://suite.auterion.com/vehicles/18065' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109BAA4B'
+2025-04-23 16:29:29,138 - ulog_scraper - INFO - Interactive 138: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18065' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,166 - ulog_scraper - INFO - Interactive 139: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,218 - ulog_scraper - INFO - Interactive 140: <a> href='https://suite.auterion.com/vehicles/18064' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10929B28'
+2025-04-23 16:29:29,271 - ulog_scraper - INFO - Interactive 141: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18064' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,304 - ulog_scraper - INFO - Interactive 142: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,355 - ulog_scraper - INFO - Interactive 143: <a> href='https://suite.auterion.com/vehicles/18063' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10963E4C'
+2025-04-23 16:29:29,399 - ulog_scraper - INFO - Interactive 144: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18063' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,477 - ulog_scraper - INFO - Interactive 145: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,527 - ulog_scraper - INFO - Interactive 146: <a> href='https://suite.auterion.com/vehicles/18062' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109699F6'
+2025-04-23 16:29:29,581 - ulog_scraper - INFO - Interactive 147: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18062' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,623 - ulog_scraper - INFO - Interactive 148: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,679 - ulog_scraper - INFO - Interactive 149: <a> href='https://suite.auterion.com/vehicles/18061' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109F2358'
+2025-04-23 16:29:29,729 - ulog_scraper - INFO - Interactive 150: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18061' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,767 - ulog_scraper - INFO - Interactive 151: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,816 - ulog_scraper - INFO - Interactive 152: <a> href='https://suite.auterion.com/vehicles/18060' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109AF49F'
+2025-04-23 16:29:29,870 - ulog_scraper - INFO - Interactive 153: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18060' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:29,904 - ulog_scraper - INFO - Interactive 154: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:29,963 - ulog_scraper - INFO - Interactive 155: <a> href='https://suite.auterion.com/vehicles/18179' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1095C23F'
+2025-04-23 16:29:30,013 - ulog_scraper - INFO - Interactive 156: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18179' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:30,052 - ulog_scraper - INFO - Interactive 157: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:30,153 - ulog_scraper - INFO - Interactive 158: <a> href='https://suite.auterion.com/vehicles/18178' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10924742'
+2025-04-23 16:29:30,207 - ulog_scraper - INFO - Interactive 159: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18178' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:30,252 - ulog_scraper - INFO - Interactive 160: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:30,314 - ulog_scraper - INFO - Interactive 161: <a> href='https://suite.auterion.com/vehicles/18177' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10999DBF'
+2025-04-23 16:29:30,405 - ulog_scraper - INFO - Interactive 162: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18177' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:30,454 - ulog_scraper - INFO - Interactive 163: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:30,518 - ulog_scraper - INFO - Interactive 164: <a> href='https://suite.auterion.com/vehicles/3996' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 10927F8F'
+2025-04-23 16:29:30,597 - ulog_scraper - INFO - Interactive 165: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3996' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:30,694 - ulog_scraper - INFO - Interactive 166: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:30,769 - ulog_scraper - INFO - Interactive 167: <a> href='https://suite.auterion.com/vehicles/18089' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1090E778'
+2025-04-23 16:29:30,839 - ulog_scraper - INFO - Interactive 168: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18089' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:30,888 - ulog_scraper - INFO - Interactive 169: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:30,956 - ulog_scraper - INFO - Interactive 170: <a> href='https://suite.auterion.com/vehicles/18087' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 1094312F'
+2025-04-23 16:29:31,019 - ulog_scraper - INFO - Interactive 171: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18087' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:31,066 - ulog_scraper - INFO - Interactive 172: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:31,139 - ulog_scraper - INFO - Interactive 173: <a> href='https://suite.auterion.com/vehicles/4942' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Alta X - 240529'
+2025-04-23 16:29:31,218 - ulog_scraper - INFO - Interactive 174: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4942' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:31,347 - ulog_scraper - INFO - Interactive 175: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:31,423 - ulog_scraper - INFO - Interactive 176: <a> href='https://suite.auterion.com/vehicles/3962' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Alta X - 121931'
+2025-04-23 16:29:31,503 - ulog_scraper - INFO - Interactive 177: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3962' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:31,559 - ulog_scraper - INFO - Interactive 178: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:31,644 - ulog_scraper - INFO - Interactive 179: <a> href='https://suite.auterion.com/vehicles/3961' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Alta X - 103359'
+2025-04-23 16:29:31,726 - ulog_scraper - INFO - Interactive 180: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3961' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:31,775 - ulog_scraper - INFO - Interactive 181: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:31,889 - ulog_scraper - INFO - Interactive 182: <a> href='https://suite.auterion.com/vehicles/4070' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='103416'
+2025-04-23 16:29:31,964 - ulog_scraper - INFO - Interactive 183: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4070' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:32,017 - ulog_scraper - INFO - Interactive 184: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:32,088 - ulog_scraper - INFO - Interactive 185: <a> href='https://suite.auterion.com/vehicles/8435' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='103428 usfs'
+2025-04-23 16:29:32,159 - ulog_scraper - INFO - Interactive 186: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=8435' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:32,208 - ulog_scraper - INFO - Interactive 187: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:32,280 - ulog_scraper - INFO - Interactive 188: <a> href='https://suite.auterion.com/vehicles/8434' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='103433 usfs'
+2025-04-23 16:29:32,353 - ulog_scraper - INFO - Interactive 189: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=8434' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:32,400 - ulog_scraper - INFO - Interactive 190: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:32,527 - ulog_scraper - INFO - Interactive 191: <a> href='https://suite.auterion.com/vehicles/4071' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='103439'
+2025-04-23 16:29:32,606 - ulog_scraper - INFO - Interactive 192: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4071' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:32,654 - ulog_scraper - INFO - Interactive 193: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:32,725 - ulog_scraper - INFO - Interactive 194: <a> href='https://suite.auterion.com/vehicles/3225' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='109B78A5'
+2025-04-23 16:29:32,789 - ulog_scraper - INFO - Interactive 195: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3225' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:32,846 - ulog_scraper - INFO - Interactive 196: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:32,917 - ulog_scraper - INFO - Interactive 197: <a> href='https://suite.auterion.com/vehicles/4067' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='121816'
+2025-04-23 16:29:32,991 - ulog_scraper - INFO - Interactive 198: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4067' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:33,039 - ulog_scraper - INFO - Interactive 199: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:33,185 - ulog_scraper - INFO - Interactive 200: <a> href='https://suite.auterion.com/vehicles/11865' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='361572 usfs'
+2025-04-23 16:29:33,247 - ulog_scraper - INFO - Interactive 201: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=11865' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:33,287 - ulog_scraper - INFO - Interactive 202: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:33,353 - ulog_scraper - INFO - Interactive 203: <a> href='https://suite.auterion.com/vehicles/8433' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='403605 usfs'
+2025-04-23 16:29:33,422 - ulog_scraper - INFO - Interactive 204: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=8433' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:33,472 - ulog_scraper - INFO - Interactive 205: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:33,545 - ulog_scraper - INFO - Interactive 206: <a> href='https://suite.auterion.com/vehicles/3995' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='620978'
+2025-04-23 16:29:33,614 - ulog_scraper - INFO - Interactive 207: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3995' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:33,711 - ulog_scraper - INFO - Interactive 208: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:33,793 - ulog_scraper - INFO - Interactive 209: <a> href='https://suite.auterion.com/vehicles/4068' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='648573'
+2025-04-23 16:29:33,863 - ulog_scraper - INFO - Interactive 210: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4068' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:33,910 - ulog_scraper - INFO - Interactive 211: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:33,980 - ulog_scraper - INFO - Interactive 212: <a> href='https://suite.auterion.com/vehicles/3975' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='685891'
+2025-04-23 16:29:34,052 - ulog_scraper - INFO - Interactive 213: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3975' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:34,100 - ulog_scraper - INFO - Interactive 214: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:34,167 - ulog_scraper - INFO - Interactive 215: <a> href='https://suite.auterion.com/vehicles/4040' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='714835'
+2025-04-23 16:29:34,233 - ulog_scraper - INFO - Interactive 216: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4040' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:34,281 - ulog_scraper - INFO - Interactive 217: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:34,401 - ulog_scraper - INFO - Interactive 218: <a> href='https://suite.auterion.com/vehicles/4066' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='755505'
+2025-04-23 16:29:34,503 - ulog_scraper - INFO - Interactive 219: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4066' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:34,566 - ulog_scraper - INFO - Interactive 220: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:34,637 - ulog_scraper - INFO - Interactive 221: <a> href='https://suite.auterion.com/vehicles/4461' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='798714'
+2025-04-23 16:29:34,706 - ulog_scraper - INFO - Interactive 222: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4461' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:34,751 - ulog_scraper - INFO - Interactive 223: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:34,824 - ulog_scraper - INFO - Interactive 224: <a> href='https://suite.auterion.com/vehicles/4039' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='820371'
+2025-04-23 16:29:34,937 - ulog_scraper - INFO - Interactive 225: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4039' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:34,984 - ulog_scraper - INFO - Interactive 226: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:35,066 - ulog_scraper - INFO - Interactive 227: <a> href='https://suite.auterion.com/vehicles/3993' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='838454'
+2025-04-23 16:29:35,144 - ulog_scraper - INFO - Interactive 228: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3993' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:35,195 - ulog_scraper - INFO - Interactive 229: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:35,265 - ulog_scraper - INFO - Interactive 230: <a> href='https://suite.auterion.com/vehicles/4065' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='899159'
+2025-04-23 16:29:35,331 - ulog_scraper - INFO - Interactive 231: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4065' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:35,383 - ulog_scraper - INFO - Interactive 232: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:35,450 - ulog_scraper - INFO - Interactive 233: <a> href='https://suite.auterion.com/vehicles/3992' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='908165'
+2025-04-23 16:29:35,566 - ulog_scraper - INFO - Interactive 234: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3992' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:35,620 - ulog_scraper - INFO - Interactive 235: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:35,684 - ulog_scraper - INFO - Interactive 236: <a> href='https://suite.auterion.com/vehicles/4463' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='916971'
+2025-04-23 16:29:35,756 - ulog_scraper - INFO - Interactive 237: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4463' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:35,807 - ulog_scraper - INFO - Interactive 238: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:35,874 - ulog_scraper - INFO - Interactive 239: <a> href='https://suite.auterion.com/vehicles/4796' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='934113'
+2025-04-23 16:29:35,941 - ulog_scraper - INFO - Interactive 240: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4796' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:35,987 - ulog_scraper - INFO - Interactive 241: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:36,098 - ulog_scraper - INFO - Interactive 242: <a> href='https://suite.auterion.com/vehicles/4464' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='944206'
+2025-04-23 16:29:36,171 - ulog_scraper - INFO - Interactive 243: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=4464' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:36,223 - ulog_scraper - INFO - Interactive 244: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:36,300 - ulog_scraper - INFO - Interactive 245: <a> href='https://suite.auterion.com/vehicles/3991' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='985100'
+2025-04-23 16:29:36,374 - ulog_scraper - INFO - Interactive 246: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3991' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:36,426 - ulog_scraper - INFO - Interactive 247: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:36,505 - ulog_scraper - INFO - Interactive 248: <a> href='https://suite.auterion.com/vehicles/8436' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='999427 usfs'
+2025-04-23 16:29:36,574 - ulog_scraper - INFO - Interactive 249: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=8436' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:36,626 - ulog_scraper - INFO - Interactive 250: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:36,748 - ulog_scraper - INFO - Interactive 251: <a> href='https://suite.auterion.com/vehicles/2366' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Alabama'
+2025-04-23 16:29:36,895 - ulog_scraper - INFO - Interactive 252: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=2366' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:36,957 - ulog_scraper - INFO - Interactive 253: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:37,047 - ulog_scraper - INFO - Interactive 254: <a> href='https://suite.auterion.com/vehicles/3217' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Alaska'
+2025-04-23 16:29:37,113 - ulog_scraper - INFO - Interactive 255: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3217' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:37,165 - ulog_scraper - INFO - Interactive 256: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:37,226 - ulog_scraper - INFO - Interactive 257: <a> href='https://suite.auterion.com/vehicles/3092' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Arizona'
+2025-04-23 16:29:37,352 - ulog_scraper - INFO - Interactive 258: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=3092' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:37,407 - ulog_scraper - INFO - Interactive 259: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:37,493 - ulog_scraper - INFO - Interactive 260: <a> href='https://suite.auterion.com/vehicles/2980' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Arkansas'
+2025-04-23 16:29:37,562 - ulog_scraper - INFO - Interactive 261: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=2980' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:37,606 - ulog_scraper - INFO - Interactive 262: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:37,680 - ulog_scraper - INFO - Interactive 263: <a> href='https://suite.auterion.com/vehicles/18088' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109BCBAE (Sigma 6 Blue)'
+2025-04-23 16:29:37,747 - ulog_scraper - INFO - Interactive 264: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=18088' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:37,794 - ulog_scraper - INFO - Interactive 265: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:37,912 - ulog_scraper - INFO - Interactive 266: <a> href='https://suite.auterion.com/vehicles/11093' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro - 109FED87 (Sigma 1)'
+2025-04-23 16:29:37,995 - ulog_scraper - INFO - Interactive 267: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=11093' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='2'
+2025-04-23 16:29:38,060 - ulog_scraper - INFO - Interactive 268: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:38,132 - ulog_scraper - INFO - Interactive 269: <a> href='https://suite.auterion.com/vehicles/2162' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Demo 1 (109DD8C8)'
+2025-04-23 16:29:38,225 - ulog_scraper - INFO - Interactive 270: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=2162' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:38,288 - ulog_scraper - INFO - Interactive 271: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:38,368 - ulog_scraper - INFO - Interactive 272: <a> href='https://suite.auterion.com/vehicles/2118' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Demo 2 - 109D45D9'
+2025-04-23 16:29:38,490 - ulog_scraper - INFO - Interactive 273: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=2118' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='2'
+2025-04-23 16:29:38,544 - ulog_scraper - INFO - Interactive 274: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:38,616 - ulog_scraper - INFO - Interactive 275: <a> href='https://suite.auterion.com/vehicles/1884' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Demo 3'
+2025-04-23 16:29:38,693 - ulog_scraper - INFO - Interactive 276: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1884' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:38,748 - ulog_scraper - INFO - Interactive 277: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:38,866 - ulog_scraper - INFO - Interactive 278: <a> href='https://suite.auterion.com/vehicles/2325' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Demo 4'
+2025-04-23 16:29:38,938 - ulog_scraper - INFO - Interactive 279: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=2325' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:38,989 - ulog_scraper - INFO - Interactive 280: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:39,062 - ulog_scraper - INFO - Interactive 281: <a> href='https://suite.auterion.com/vehicles/2030' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Demo 5 (109FA725)'
+2025-04-23 16:29:39,226 - ulog_scraper - INFO - Interactive 282: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=2030' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:39,303 - ulog_scraper - INFO - Interactive 283: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:39,387 - ulog_scraper - INFO - Interactive 284: <a> href='https://suite.auterion.com/vehicles/1386' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV1 (Declan)'
+2025-04-23 16:29:39,463 - ulog_scraper - INFO - Interactive 285: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1386' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='0'
+2025-04-23 16:29:39,510 - ulog_scraper - INFO - Interactive 286: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:39,580 - ulog_scraper - INFO - Interactive 287: <a> href='https://suite.auterion.com/vehicles/1556' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV18'
+2025-04-23 16:29:39,645 - ulog_scraper - INFO - Interactive 288: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1556' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='4'
+2025-04-23 16:29:39,731 - ulog_scraper - INFO - Interactive 289: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:39,806 - ulog_scraper - INFO - Interactive 290: <a> href='https://suite.auterion.com/vehicles/1557' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV19 (DarkWolf)'
+2025-04-23 16:29:39,881 - ulog_scraper - INFO - Interactive 291: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1557' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:39,942 - ulog_scraper - INFO - Interactive 292: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:40,010 - ulog_scraper - INFO - Interactive 293: <a> href='https://suite.auterion.com/vehicles/1404' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV2 (Hangar)'
+2025-04-23 16:29:40,088 - ulog_scraper - INFO - Interactive 294: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1404' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:40,132 - ulog_scraper - INFO - Interactive 295: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:40,196 - ulog_scraper - INFO - Interactive 296: <a> href='https://suite.auterion.com/vehicles/1661' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV21 (Nate)'
+2025-04-23 16:29:40,260 - ulog_scraper - INFO - Interactive 297: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1661' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='2'
+2025-04-23 16:29:40,356 - ulog_scraper - INFO - Interactive 298: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:40,430 - ulog_scraper - INFO - Interactive 299: <a> href='https://suite.auterion.com/vehicles/1555' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV24 (Hangar)'
+2025-04-23 16:29:40,505 - ulog_scraper - INFO - Interactive 300: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1555' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:40,553 - ulog_scraper - INFO - Interactive 301: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:40,613 - ulog_scraper - INFO - Interactive 302: <a> href='https://suite.auterion.com/vehicles/1420' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV7 (Nate)'
+2025-04-23 16:29:40,679 - ulog_scraper - INFO - Interactive 303: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1420' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:40,725 - ulog_scraper - INFO - Interactive 304: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:40,790 - ulog_scraper - INFO - Interactive 305: <a> href='https://suite.auterion.com/vehicles/1493' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro DV9 (Viresh)'
+2025-04-23 16:29:40,862 - ulog_scraper - INFO - Interactive 306: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1493' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:40,908 - ulog_scraper - INFO - Interactive 307: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:41,018 - ulog_scraper - INFO - Interactive 308: <a> href='https://suite.auterion.com/vehicles/1927' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Eng 2 (Hangar)'
+2025-04-23 16:29:41,081 - ulog_scraper - INFO - Interactive 309: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1927' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:41,125 - ulog_scraper - INFO - Interactive 310: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:41,194 - ulog_scraper - INFO - Interactive 311: <a> href='https://suite.auterion.com/vehicles/1421' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Max DV6 (Tether)'
+2025-04-23 16:29:41,263 - ulog_scraper - INFO - Interactive 312: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1421' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='2'
+2025-04-23 16:29:41,312 - ulog_scraper - INFO - Interactive 313: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:41,385 - ulog_scraper - INFO - Interactive 314: <a> href='https://suite.auterion.com/vehicles/1738' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro PV1 (Gimbal Production)'
+2025-04-23 16:29:41,460 - ulog_scraper - INFO - Interactive 315: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1738' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:41,572 - ulog_scraper - INFO - Interactive 316: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:41,645 - ulog_scraper - INFO - Interactive 317: <a> href='https://suite.auterion.com/vehicles/1756' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro PV3 (Hangar)'
+2025-04-23 16:29:41,713 - ulog_scraper - INFO - Interactive 318: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1756' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='2'
+2025-04-23 16:29:41,764 - ulog_scraper - INFO - Interactive 319: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:41,830 - ulog_scraper - INFO - Interactive 320: <a> href='https://suite.auterion.com/vehicles/1749' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro PV5 (Jeremy)'
+2025-04-23 16:29:41,900 - ulog_scraper - INFO - Interactive 321: <a> href='https://suite.auterion.com/vehicles?action=manageVehicleAssets&toManage=1749' id='(no id)' class='router-link-active router-link-exact-active badge badge-info' text='1'
+2025-04-23 16:29:41,949 - ulog_scraper - INFO - Interactive 322: <input> id='(no id)' class='mr-1' text='(no text)'
+2025-04-23 16:29:42,029 - ulog_scraper - INFO - Interactive 323: <a> href='https://suite.auterion.com/vehicles/3171' id='(no id)' class='flex items-center gap-0.5 link leading-4' text='Astro Support Loaner #1'
+2025-04-23 16:29:43,885 - ulog_scraper - ERROR - Login completion detection failed: HTTPConnectionPool(host='localhost', port=50945): Max retries exceeded with url: /session/82e2321f9945d6cea6e39d29dfe72307/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dd7f7b86140>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-23 16:29:43,892 - ulog_scraper - ERROR - Error during login process: HTTPConnectionPool(host='localhost', port=50945): Max retries exceeded with url: /session/82e2321f9945d6cea6e39d29dfe72307/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dd7f7bbca00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-23 16:29:43,897 - ulog_scraper - ERROR - Login process failed: HTTPConnectionPool(host='localhost', port=50945): Max retries exceeded with url: /session/82e2321f9945d6cea6e39d29dfe72307/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dd7f7b87430>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-23 16:31:06,340 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 16:31:06,990 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 16:31:07,040 - ulog_scraper - INFO - Starting login process
+2025-04-23 16:31:09,382 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 16:31:14,672 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 16:31:14,672 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 16:31:14,672 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 16:31:14,672 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 16:31:14,682 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 16:31:14,693 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 16:31:15,422 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 16:31:15,422 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 16:31:15,423 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 16:31:15,512 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 16:31:15,512 - ulog_scraper - INFO - Entering email address
+2025-04-23 16:31:15,665 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 16:31:15,691 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 16:31:16,345 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 16:31:16,346 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 16:31:21,311 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 16:31:21,311 - ulog_scraper - INFO - Entering password
+2025-04-23 16:31:21,344 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 16:31:21,352 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 16:31:21,385 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 16:31:21,385 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-23 16:31:21,391 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-23 16:31:24,587 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=O0koUk6byhO5JUY6HCPgQ6A6Q-Yst9TJ_rMLvEXxhBJu0&state=b0pLeVc5Zy5CTWg4SzFZRXZONGZnQVdmSVpzVTZhZHpTMkxmZ21sRkJpdQ%3D%3D
+2025-04-23 16:31:24,587 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-23 16:31:24,587 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-23 16:31:30,125 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-23 16:31:30,731 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-23 16:31:37,159 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-23 16:31:37,162 - ulog_scraper - INFO - Navigation complete - checking if we reached the Vehicles page
+2025-04-23 16:31:37,164 - ulog_scraper - INFO - Successfully reached Vehicles page
+2025-04-23 16:31:37,164 - ulog_scraper - INFO - --- VEHICLES PAGE CONTENT ---
+2025-04-23 16:31:37,167 - ulog_scraper - INFO - Page title: Auterion Suite
+2025-04-23 16:31:37,178 - ulog_scraper - INFO - Found 18 headings on the page
+2025-04-23 16:31:37,189 - ulog_scraper - INFO - Heading 0: Vehicles
+2025-04-23 16:31:37,200 - ulog_scraper - INFO - Heading 1: Vehicle Groups
+2025-04-23 16:31:37,208 - ulog_scraper - INFO - Heading 2: All vehicles
+2025-04-23 16:31:37,217 - ulog_scraper - INFO - Heading 3: Eng Bench
+2025-04-23 16:31:37,226 - ulog_scraper - INFO - Heading 4: Eng Flight
+2025-04-23 16:31:37,234 - ulog_scraper - INFO - Heading 5: Florida Forest Service
+2025-04-23 16:31:37,242 - ulog_scraper - INFO - Heading 6: HQ
+2025-04-23 16:31:37,250 - ulog_scraper - INFO - Heading 7: Matt's Fleet
+2025-04-23 16:31:37,259 - ulog_scraper - INFO - Heading 8: Old mission Go units
+2025-04-23 16:31:37,267 - ulog_scraper - INFO - Heading 9: Radio Doodle
+2025-04-23 16:31:37,275 - ulog_scraper - INFO - Heading 10: Radio Herelink 1.0
+2025-04-23 16:31:37,284 - ulog_scraper - INFO - Heading 11: Radio Herelink 1.1
+2025-04-23 16:31:37,293 - ulog_scraper - INFO - Heading 12: USFS
+2025-04-23 16:31:37,302 - ulog_scraper - INFO - Heading 13: Archived Vehicles
+2025-04-23 16:31:37,310 - ulog_scraper - INFO - Heading 14: Transferred Vehicles
+2025-04-23 16:31:37,319 - ulog_scraper - INFO - Heading 15: New group
+2025-04-23 16:31:37,327 - ulog_scraper - INFO - Heading 16: All Vehicles
+2025-04-23 16:31:37,338 - ulog_scraper - INFO - Found 0 vehicle elements
+2025-04-23 16:31:37,346 - ulog_scraper - INFO - Found 1 tables
+2025-04-23 16:31:37,395 - ulog_scraper - INFO - Table 0: Found 173 rows
+2025-04-23 16:31:37,557 - ulog_scraper - INFO - Table 0 headers: Vehicle | State | Assets | Last Pilot | Model | Groups | Live Feed | Last Flight Status
+2025-04-23 16:31:37,613 - ulog_scraper - INFO - Vehicle 1: Astro - 10911F32 | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:37,663 - ulog_scraper - INFO - Vehicle 2: Astro - 109A0951 | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:37,714 - ulog_scraper - INFO - Vehicle 3: Astro - 10903B49 | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | CRITICAL
+2025-04-23 16:31:37,792 - ulog_scraper - INFO - Vehicle 4: Astro - 109115DD | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:37,843 - ulog_scraper - INFO - Vehicle 5: Astro - 109E5B83 | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:37,893 - ulog_scraper - INFO - Vehicle 6: Astro - 109B3A63 | READY | 0 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:37,948 - ulog_scraper - INFO - Vehicle 7: Astro - 109C6E4E | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:37,997 - ulog_scraper - INFO - Vehicle 8: Astro - 109150C0 | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | CRITICAL
+2025-04-23 16:31:38,052 - ulog_scraper - INFO - Vehicle 9: Astro - 1096B1B0 | READY | 1 | Unknown pilot | Astro | JOIN GROUP |  | HEALTHY
+2025-04-23 16:31:38,134 - ulog_scraper - INFO - Saved Vehicles page source to logs/vehicles_page.html
+2025-04-23 16:31:38,134 - ulog_scraper - INFO - --- LISTING ALL VISIBLE ELEMENTS ON PAGE ---
+2025-04-23 16:31:38,486 - ulog_scraper - INFO - Found 6905 total elements on the page
+2025-04-23 16:31:38,500 - ulog_scraper - INFO - --- HEADINGS AND NAVIGATION ---
+2025-04-23 16:31:38,533 - ulog_scraper - INFO - Heading/Nav 0: <h1> id='(no id)' class='pt-2 flex-grow mt-2' text='Vehicles'
+2025-04-23 16:31:38,584 - ulog_scraper - INFO - Heading/Nav 1: <h3> id='(no id)' class='mr-2' text='Vehicle Groups'
+2025-04-23 16:31:38,617 - ulog_scraper - INFO - Heading/Nav 2: <h3> id='(no id)' class='(no class)' text='All vehicles'
+2025-04-23 16:31:38,674 - ulog_scraper - INFO - Heading/Nav 3: <h3> id='(no id)' class='(no class)' text='Eng Bench'
+2025-04-23 16:31:38,722 - ulog_scraper - INFO - Heading/Nav 4: <h3> id='(no id)' class='(no class)' text='Eng Flight'
+2025-04-23 16:31:38,767 - ulog_scraper - INFO - Heading/Nav 5: <h3> id='(no id)' class='(no class)' text='Florida Forest Service'
+2025-04-23 16:31:38,818 - ulog_scraper - INFO - Heading/Nav 6: <h3> id='(no id)' class='(no class)' text='HQ'
+2025-04-23 16:31:38,865 - ulog_scraper - INFO - Heading/Nav 7: <h3> id='(no id)' class='(no class)' text='Matt's Fleet'
+2025-04-23 16:31:38,913 - ulog_scraper - INFO - Heading/Nav 8: <h3> id='(no id)' class='(no class)' text='Old mission Go units'
+2025-04-23 16:31:39,060 - ulog_scraper - INFO - Heading/Nav 9: <h3> id='(no id)' class='(no class)' text='Radio Doodle'
+2025-04-23 16:31:39,091 - ulog_scraper - INFO - Heading/Nav 10: <h3> id='(no id)' class='(no class)' text='Radio Herelink 1.0'
+2025-04-23 16:31:39,129 - ulog_scraper - INFO - Heading/Nav 11: <h3> id='(no id)' class='(no class)' text='Radio Herelink 1.1'
+2025-04-23 16:31:39,154 - ulog_scraper - INFO - Heading/Nav 12: <h3> id='(no id)' class='(no class)' text='USFS'
+2025-04-23 16:31:39,196 - ulog_scraper - INFO - Heading/Nav 13: <h3> id='(no id)' class='(no class)' text='Archived Vehicles'
+2025-04-23 16:31:39,233 - ulog_scraper - INFO - Heading/Nav 14: <h3> id='(no id)' class='(no class)' text='Transferred Vehicles'
+2025-04-23 16:31:39,268 - ulog_scraper - INFO - Heading/Nav 15: <h3> id='(no id)' class='mb-16' text='New group'
+2025-04-23 16:31:39,304 - ulog_scraper - INFO - Heading/Nav 16: <h3> id='(no id)' class='(no class)' text='All Vehicles'
+2025-04-23 16:31:39,395 - ulog_scraper - INFO - --- INTERACTIVE ELEMENTS ---
+2025-04-23 16:31:39,419 - ulog_scraper - INFO - Interactive 0: <a> href='https://suite.auterion.com/' id='(no id)' class='flex items-center gap-2 cursor-pointer' text='(no text)'
+2025-04-23 16:31:39,458 - ulog_scraper - INFO - Interactive 2: <a> href='https://suite.auterion.com/' id='(no id)' class='nav-item mb-3' text='Overview'
+2025-04-23 16:31:39,496 - ulog_scraper - INFO - Interactive 3: <a> id='(no id)' class='nav-item !z-50' text='Fleet Management'
+2025-04-23 16:31:39,534 - ulog_scraper - INFO - Interactive 4: <a> href='https://suite.auterion.com/vehicles' id='(no id)' class='router-link-active router-link-exact-active nav-item active transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Vehicles'
+2025-04-23 16:31:39,617 - ulog_scraper - INFO - Interactive 5: <a> href='https://suite.auterion.com/flights' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Flights'
+2025-04-23 16:31:39,648 - ulog_scraper - INFO - Interactive 6: <a> href='https://suite.auterion.com/assets' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Assets'
+2025-04-23 16:31:39,693 - ulog_scraper - INFO - Interactive 7: <a> href='https://suite.auterion.com/maintenance' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Maintenance'
+2025-04-23 16:31:39,734 - ulog_scraper - INFO - Interactive 8: <a> href='https://suite.auterion.com/service-bulletins' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Service Bulletins'
+2025-04-23 16:31:39,771 - ulog_scraper - INFO - Interactive 9: <a> id='(no id)' class='nav-item !z-50' text='Operations'
+2025-04-23 16:31:39,808 - ulog_scraper - INFO - Interactive 10: <a> href='https://suite.auterion.com/mission-sync' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Mission Sync'
+2025-04-23 16:31:39,850 - ulog_scraper - INFO - Interactive 11: <a> href='https://suite.auterion.com/simulations' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Simulations'
+2025-04-23 16:31:39,893 - ulog_scraper - INFO - Interactive 12: <a> id='(no id)' class='nav-item !z-50' text='Manufacturer'
+2025-04-23 16:31:39,937 - ulog_scraper - INFO - Interactive 13: <a> href='https://suite.auterion.com/insights' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Insights'
+2025-04-23 16:31:39,983 - ulog_scraper - INFO - Interactive 14: <a> href='https://suite.auterion.com/manufacturer/models' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Vehicle Models'
+2025-04-23 16:31:40,041 - ulog_scraper - INFO - Interactive 15: <a> href='https://suite.auterion.com/manufacturer/software' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Software Products'
+2025-04-23 16:31:40,104 - ulog_scraper - INFO - Interactive 16: <a> href='https://suite.auterion.com/downloads/oem-tools' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='OEM Toolkit'
+2025-04-23 16:31:40,150 - ulog_scraper - INFO - Interactive 17: <a> href='https://suite.auterion.com/manufacturer/support' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Support Requests'
+2025-04-23 16:31:40,241 - ulog_scraper - INFO - Interactive 18: <a> href='https://suite.auterion.com/manufacturer/service-bulletins' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Service Bulletins'
+2025-04-23 16:31:40,291 - ulog_scraper - INFO - Interactive 19: <a> href='https://suite.auterion.com/software-manifests/named' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Manifests'
+2025-04-23 16:31:40,339 - ulog_scraper - INFO - Interactive 20: <a> id='(no id)' class='nav-item !z-50' text='Software'
+2025-04-23 16:31:40,391 - ulog_scraper - INFO - Interactive 21: <a> href='https://suite.auterion.com/store' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Store'
+2025-04-23 16:31:40,436 - ulog_scraper - INFO - Interactive 22: <a> href='https://suite.auterion.com/downloads/app-developer-tools' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Dev Tools'
+2025-04-23 16:31:40,488 - ulog_scraper - INFO - Interactive 23: <a> href='https://suite.auterion.com/downloads/software' id='(no id)' class='nav-item transition-colors duration-100 !text-[#0D1520] !bg-[#0D1520]' text='Downloads'
+2025-04-23 16:31:40,528 - ulog_scraper - INFO - Interactive 24: <a> href='https://suite.auterion.com/settings' id='(no id)' class='nav-item' text='Settings'
+2025-04-23 16:31:45,705 - ulog_scraper - ERROR - Login completion detection failed: HTTPConnectionPool(host='localhost', port=45273): Max retries exceeded with url: /session/a3713016f16153beea823c1ef144a8f2/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73a169b4f550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-23 16:31:45,707 - ulog_scraper - ERROR - Error during login process: HTTPConnectionPool(host='localhost', port=45273): Max retries exceeded with url: /session/a3713016f16153beea823c1ef144a8f2/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73a169b4ef50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-23 16:31:45,709 - ulog_scraper - ERROR - Login process failed: HTTPConnectionPool(host='localhost', port=45273): Max retries exceeded with url: /session/a3713016f16153beea823c1ef144a8f2/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x73a169d6a380>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-23 16:34:45,685 - ulog_scraper - INFO - Loaded .env file
+2025-04-23 16:34:46,313 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-23 16:34:46,377 - ulog_scraper - INFO - Starting login process
+2025-04-23 16:34:48,751 - ulog_scraper - INFO - Navigated to login page
+2025-04-23 16:34:54,016 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-23 16:34:54,016 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-23 16:34:54,016 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-23 16:34:54,016 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-23 16:34:54,026 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-23 16:34:54,037 - ulog_scraper - INFO - Found login button: Login
+2025-04-23 16:34:54,760 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-23 16:34:54,760 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-23 16:34:54,760 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 16:34:54,819 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-23 16:34:54,820 - ulog_scraper - INFO - Entering email address
+2025-04-23 16:34:54,965 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-23 16:34:54,988 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-23 16:34:55,579 - ulog_scraper - INFO - Clicked continue button
+2025-04-23 16:34:55,579 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-23 16:34:59,397 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-23 16:34:59,397 - ulog_scraper - INFO - Entering password
+2025-04-23 16:34:59,432 - ulog_scraper - INFO - Looking for final submit button
+2025-04-23 16:34:59,442 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-23 16:35:01,516 - ulog_scraper - INFO - Clicked submit button
+2025-04-23 16:35:01,516 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-23 16:35:01,523 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-23 16:35:01,728 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=5WaQ9NQZ1sXOKCtRsf_g9uXdzIHwvZKzFzZ6CAzpLNdjh&state=X1JOT0d0NlRUcjZfTGhaQjcwLWk0NVhublNZYlFSc0xac1FFdVAzY0RIZA%3D%3D
+2025-04-23 16:35:01,728 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-23 16:35:01,729 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-23 16:35:07,008 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-23 16:35:07,752 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-23 16:35:12,961 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-23 16:35:12,963 - ulog_scraper - INFO - Successfully reached Vehicles page - keeping browser open
+2025-04-23 16:35:12,963 - ulog_scraper - INFO - Browser window will remain open for manual inspection
+2025-04-23 16:35:12,964 - ulog_scraper - INFO - Script execution complete
+2025-04-23 16:35:12,964 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-23 16:35:12,972 - ulog_scraper - INFO - Spider closed but keeping browser open as requested

@@ -187,6 +187,7 @@ class LogDownloaderSpider(scrapy.Spider):
         4. Find and fill password field
         5. Click final submit button
         6. Wait for successful login
+        7. Navigate to vehicles page and stop
         
         Returns:
             bool: True if login was successful, raises exception otherwise
@@ -375,81 +376,13 @@ class LogDownloaderSpider(scrapy.Spider):
                 self.driver.save_screenshot('logs/post_login_state.png')
                 self.log(f"Current URL after login: {self.driver.current_url}")
                 
-                # Print all visible elements on the page
-                self.log("--- LISTING ALL VISIBLE ELEMENTS ON PAGE ---")
+                # Navigate to Vehicles page and stop
+                self.navigate_to_vehicles()
                 
-                # Get all elements
-                all_elements = self.driver.find_elements(By.XPATH, "//*")
-                self.log(f"Found {len(all_elements)} total elements on the page")
-                
-                # Print headings and navigation elements first (usually most important)
-                headings = self.driver.find_elements(By.XPATH, "//h1 | //h2 | //h3 | //nav//a | //nav//button")
-                self.log("--- HEADINGS AND NAVIGATION ---")
-                for i, elem in enumerate(headings):
-                    try:
-                        if elem.is_displayed():
-                            tag_name = elem.tag_name
-                            text = elem.text.strip() if elem.text else "(no text)"
-                            element_id = elem.get_attribute("id") or "(no id)"
-                            element_class = elem.get_attribute("class") or "(no class)"
-                            self.log(f"Heading/Nav {i}: <{tag_name}> id='{element_id}' class='{element_class}' text='{text}'")
-                    except:
-                        pass
-                
-                # Print interactive elements (buttons, links, inputs)
-                interactive = self.driver.find_elements(By.XPATH, "//button | //a | //input | //select")
-                self.log("--- INTERACTIVE ELEMENTS ---")
-                for i, elem in enumerate(interactive):
-                    try:
-                        if elem.is_displayed():
-                            tag_name = elem.tag_name
-                            text = elem.text.strip() if elem.text else "(no text)"
-                            element_id = elem.get_attribute("id") or "(no id)"
-                            element_class = elem.get_attribute("class") or "(no class)"
-                            element_href = elem.get_attribute("href") if tag_name == "a" else ""
-                            href_info = f" href='{element_href}'" if element_href else ""
-                            self.log(f"Interactive {i}: <{tag_name}>{href_info} id='{element_id}' class='{element_class}' text='{text}'")
-                    except:
-                        pass
-                
-                # List table data if present (often contains logs and important data)
-                tables = self.driver.find_elements(By.XPATH, "//table")
-                if tables:
-                    self.log("--- TABLE DATA ---")
-                    for t, table in enumerate(tables):
-                        try:
-                            if table.is_displayed():
-                                rows = table.find_elements(By.TAG_NAME, "tr")
-                                self.log(f"Table {t}: Found {len(rows)} rows")
-                                
-                                # Get headers
-                                headers = table.find_elements(By.TAG_NAME, "th")
-                                if headers:
-                                    header_texts = [h.text for h in headers if h.text.strip()]
-                                    self.log(f"Table {t} headers: {' | '.join(header_texts)}")
-                                
-                                # Sample some row data (up to 5 rows)
-                                for i, row in enumerate(rows[:5]):
-                                    cells = row.find_elements(By.TAG_NAME, "td")
-                                    if cells:
-                                        cell_texts = [c.text.strip() for c in cells]
-                                        self.log(f"Table {t}, Row {i}: {' | '.join(cell_texts)}")
-                        except:
-                            pass
-                
-                # Save page source
-                with open('logs/post_login_page.html', 'w', encoding='utf-8') as f:
-                    f.write(self.driver.page_source)
-                self.log("Saved post-login page source to logs/post_login_page.html")
-                
-                # Flag to keep browser open
+                # Flag to keep browser open - this is already set in navigate_to_vehicles()
                 self.keep_browser_open = True
                 
-                # Pause execution (keep browser open)
-                self.log("Browser will remain open. You can examine it directly.")
-                self.log("The script has completed but the browser window will stay open.")
-                
-                # Keep the browser open by returning True
+                # Return True to indicate successful login
                 return True
                 
             except Exception as e:
@@ -461,6 +394,123 @@ class LogDownloaderSpider(scrapy.Spider):
             self.log(f"Error during login process: {str(e)}", logging.ERROR)
             self.driver.save_screenshot('logs/login_error.png')
             raise
+    
+    def navigate_to_vehicles(self):
+        """
+        Navigate to the Vehicles page by first going to /vehicles directly.
+        Handles timing issues by waiting for page to fully load.
+        Then simply keeps the browser window open.
+        """
+        self.log("Attempting to navigate to Vehicles page")
+        try:
+            # First ensure the page is fully loaded after login
+            self.log("Ensuring page is fully loaded")
+            WebDriverWait(self.driver, 30).until(
+                lambda driver: driver.execute_script("return document.readyState") == "complete"
+            )
+            time.sleep(5)  # Additional wait to ensure UI elements are rendered
+            
+            # Take a screenshot of the current state
+            self.driver.save_screenshot('logs/after_login_fully_loaded.png')
+            
+            # Directly navigate to Vehicles page
+            self.log("Direct navigation to Vehicles page")
+            self.driver.get("https://suite.auterion.com/vehicles")
+            
+            # Wait for the Vehicles page to load
+            self.log("Waiting for Vehicles page to load")
+            WebDriverWait(self.driver, 30).until(
+                lambda driver: driver.execute_script("return document.readyState") == "complete"
+            )
+            time.sleep(5)  # Additional wait to ensure UI elements are rendered
+            
+            # Take screenshot of the Vehicles page
+            self.driver.save_screenshot('logs/vehicles_page_direct.png')
+            self.log(f"Current URL after direct navigation: {self.driver.current_url}")
+            
+            # Set flag to keep browser open
+            self.keep_browser_open = True
+            
+            # Create a file to signal we're keeping the browser open
+            with open('browser_open.txt', 'w') as f:
+                f.write(f"Browser remains open with session at: {self.driver.current_url}\n")
+                f.write("Script has finished execution, but browser should remain open.\n")
+                f.write("Close browser manually when finished examining.")
+            
+            self.log("Successfully reached Vehicles page - keeping browser open")
+            self.log("Browser window will remain open for manual inspection")
+            self.log("Script execution complete")
+            
+        except Exception as e:
+            self.log(f"Error navigating to Vehicles page: {str(e)}", logging.ERROR)
+            self.driver.save_screenshot('logs/vehicles_navigation_error.png')
+    
+    def log_vehicles_page_info(self):
+        """
+        Log information about the content of the Vehicles page.
+        """
+        self.log("--- VEHICLES PAGE CONTENT ---")
+        
+        # Log page title
+        try:
+            page_title = self.driver.title
+            self.log(f"Page title: {page_title}")
+        except:
+            self.log("Could not get page title")
+        
+        # Get all headings
+        try:
+            headings = self.driver.find_elements(By.XPATH, "//h1 | //h2 | //h3 | //h4")
+            self.log(f"Found {len(headings)} headings on the page")
+            for i, heading in enumerate(headings):
+                if heading.is_displayed():
+                    self.log(f"Heading {i}: {heading.text}")
+        except Exception as e:
+            self.log(f"Error getting headings: {e}")
+        
+        # Get vehicle information from tables or lists
+        try:
+            # Try to find vehicle elements - adjust selectors based on actual page structure
+            vehicle_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.vehicle-item, tr.vehicle-row")
+            self.log(f"Found {len(vehicle_elements)} vehicle elements")
+            
+            # If no specific vehicle elements found, try to get table data
+            if not vehicle_elements:
+                tables = self.driver.find_elements(By.TAG_NAME, "table")
+                self.log(f"Found {len(tables)} tables")
+                
+                for t, table in enumerate(tables):
+                    if table.is_displayed():
+                        rows = table.find_elements(By.TAG_NAME, "tr")
+                        self.log(f"Table {t}: Found {len(rows)} rows")
+                        
+                        # Get headers
+                        headers = table.find_elements(By.TAG_NAME, "th")
+                        if headers:
+                            header_texts = [h.text for h in headers if h.text.strip()]
+                            self.log(f"Table {t} headers: {' | '.join(header_texts)}")
+                        
+                        # Get row data
+                        for i, row in enumerate(rows[:10]):  # Log up to 10 rows
+                            cells = row.find_elements(By.TAG_NAME, "td")
+                            if cells:
+                                cell_texts = [c.text.strip() for c in cells]
+                                self.log(f"Vehicle {i}: {' | '.join(cell_texts)}")
+            else:
+                # Log information about each vehicle
+                for i, vehicle in enumerate(vehicle_elements[:10]):  # Log up to 10 vehicles
+                    self.log(f"Vehicle {i}: {vehicle.text}")
+        
+        except Exception as e:
+            self.log(f"Error getting vehicle information: {str(e)}", logging.ERROR)
+        
+        # Save page source
+        try:
+            with open('logs/vehicles_page.html', 'w', encoding='utf-8') as f:
+                f.write(self.driver.page_source)
+            self.log("Saved Vehicles page source to logs/vehicles_page.html")
+        except Exception as e:
+            self.log(f"Error saving page source: {str(e)}", logging.ERROR)
     
     def navigate_to_logs(self):
         """
