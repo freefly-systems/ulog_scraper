@@ -397,9 +397,8 @@ class LogDownloaderSpider(scrapy.Spider):
     
     def navigate_to_vehicles(self):
         """
-        Navigate to the Vehicles page by first going to /vehicles directly.
-        Handles timing issues by waiting for page to fully load.
-        Then simply keeps the browser window open.
+        Navigate to the Vehicles page, search for 'dv21', click on the specific vehicle,
+        then click on "All Flights" button, and keep browser open.
         """
         self.log("Attempting to navigate to Vehicles page")
         try:
@@ -428,22 +427,163 @@ class LogDownloaderSpider(scrapy.Spider):
             self.driver.save_screenshot('logs/vehicles_page_direct.png')
             self.log(f"Current URL after direct navigation: {self.driver.current_url}")
             
+            # STEP 1: Search for DV21
+            # Looking for the search box at the bottom of the page from the screenshot
+            self.log("Looking for search input field")
+            search_input_selectors = [
+                # Bottom search box selector from screenshot
+                (By.CSS_SELECTOR, "input[placeholder='dv21']"),
+                (By.CSS_SELECTOR, "input.search"),
+                (By.XPATH, "//div[@class='search']//input"),
+                # More generic fallbacks
+                (By.CSS_SELECTOR, "input[type='text']"),
+                (By.XPATH, "//input")
+            ]
+            
+            search_input = None
+            for selector_type, selector in search_input_selectors:
+                try:
+                    elements = self.driver.find_elements(selector_type, selector)
+                    for element in elements:
+                        if element.is_displayed():
+                            search_input = element
+                            self.log(f"Found search input with selector {selector}")
+                            break
+                    if search_input:
+                        break
+                except Exception as e:
+                    self.log(f"Error with search input selector {selector}: {e}")
+            
+            # If we found the search input, enter "dv21" and press Enter
+            if search_input:
+                self.log("Entering 'dv21' in search field")
+                search_input.clear()
+                search_input.send_keys("dv21")
+                time.sleep(1)  # Brief pause
+                self.log("Submitting search")
+                search_input.send_keys(Keys.RETURN)
+                
+                # Wait for search results to load
+                self.log("Waiting for search results to load")
+                WebDriverWait(self.driver, 30).until(
+                    lambda driver: driver.execute_script("return document.readyState") == "complete"
+                )
+                time.sleep(5)  # Additional wait for AJAX results
+                
+                # Take screenshot of search results
+                self.driver.save_screenshot('logs/search_results_dv21.png')
+                self.log("Screenshot taken of search results")
+            else:
+                self.log("No search input found, skipping search", logging.WARNING)
+            
+            # STEP 2: Find and click on "Astro DV21 (Nate)" link within the All Vehicles section
+            self.log("Looking for 'Astro DV21 (Nate)' link")
+            dv21_link_selectors = [
+                # Based on the HTML from screenshot - direct link
+                (By.CSS_SELECTOR, "a[href='/vehicles/1661']"),
+                (By.XPATH, "//a[contains(@href, '/vehicles/1661')]"),
+                # Based on text content
+                (By.XPATH, "//a[contains(text(), 'Astro DV21')]"),
+                (By.XPATH, "//a[contains(., 'DV21')]"),
+                # More specific based on HTML structure
+                (By.XPATH, "//div[contains(@class, 'flex-row')]//a[contains(text(), 'DV21')]"),
+                (By.XPATH, "//div[contains(@class, 'items-center')]//a[contains(text(), 'DV21')]")
+            ]
+            
+            dv21_link = None
+            for selector_type, selector in dv21_link_selectors:
+                try:
+                    elements = self.driver.find_elements(selector_type, selector)
+                    for element in elements:
+                        if element.is_displayed() and "DV21" in element.text:
+                            dv21_link = element
+                            self.log(f"Found DV21 link: {element.text}")
+                            break
+                    if dv21_link:
+                        break
+                except Exception as e:
+                    self.log(f"Error with DV21 link selector {selector}: {e}")
+                
+            # If we found the link, click on it
+            if dv21_link:
+                self.log("Clicking on 'Astro DV21 (Nate)' link")
+                dv21_link.click()
+                
+                # Wait for vehicle details page to load
+                self.log("Waiting for vehicle details page to load")
+                WebDriverWait(self.driver, 30).until(
+                    lambda driver: driver.execute_script("return document.readyState") == "complete"
+                )
+                time.sleep(8)  # Longer wait to ensure all content is loaded
+                
+                # Take screenshot of the vehicle details page
+                self.driver.save_screenshot('logs/astro_dv21_details.png')
+                self.log(f"Current URL after clicking DV21 link: {self.driver.current_url}")
+                
+                # STEP 3: Find and click on "All Flights" link
+                self.log("Looking for 'All Flights' link")
+                all_flights_selectors = [
+                    # Based on the HTML from screenshot - specific href attribute
+                    (By.CSS_SELECTOR, "a[href='/flights?vehicle=1661&showRoute=true']"),
+                    (By.XPATH, "//a[contains(@href, '/flights?vehicle=1661')]"),
+                    # Based on text and class
+                    (By.XPATH, "//a[contains(@class, 'button-link') and contains(text(), 'All Flights')]"),
+                    (By.XPATH, "//a[text()='All Flights']"),
+                    # Based on the section it appears in
+                    (By.XPATH, "//h2[contains(text(), 'Recent flights')]/..//a[contains(text(), 'All Flights')]"),
+                    # Most generic
+                    (By.XPATH, "//*[contains(text(), 'All Flights')]")
+                ]
+                
+                all_flights_link = None
+                for selector_type, selector in all_flights_selectors:
+                    try:
+                        elements = self.driver.find_elements(selector_type, selector)
+                        for element in elements:
+                            if element.is_displayed() and "All Flights" in element.text:
+                                all_flights_link = element
+                                self.log(f"Found All Flights link: {element.text}")
+                                break
+                        if all_flights_link:
+                            break
+                    except Exception as e:
+                        self.log(f"Error with All Flights link selector {selector}: {e}")
+                
+                # If we found the All Flights link, click on it
+                if all_flights_link:
+                    self.log("Clicking on 'All Flights' link")
+                    all_flights_link.click()
+                    
+                    # Wait for flights page to load
+                    self.log("Waiting for flights page to load")
+                    WebDriverWait(self.driver, 30).until(
+                        lambda driver: driver.execute_script("return document.readyState") == "complete"
+                    )
+                    time.sleep(8)  # Longer wait to ensure all content is loaded
+                    
+                    # Take screenshot of the flights page
+                    self.driver.save_screenshot('logs/astro_dv21_flights.png')
+                    self.log(f"Current URL after clicking All Flights link: {self.driver.current_url}")
+                else:
+                    self.log("Could not find All Flights link", logging.WARNING)
+            else:
+                self.log("Could not find DV21 link, will not navigate to details page", logging.WARNING)
+            
             # Set flag to keep browser open
             self.keep_browser_open = True
             
             # Create a file to signal we're keeping the browser open
             with open('browser_open.txt', 'w') as f:
                 f.write(f"Browser remains open with session at: {self.driver.current_url}\n")
+                f.write("Navigation completed through: Vehicles page -> DV21 details -> All Flights\n")
                 f.write("Script has finished execution, but browser should remain open.\n")
                 f.write("Close browser manually when finished examining.")
             
-            self.log("Successfully reached Vehicles page - keeping browser open")
-            self.log("Browser window will remain open for manual inspection")
-            self.log("Script execution complete")
+            self.log("Script execution complete - browser window will remain open for manual inspection")
             
         except Exception as e:
-            self.log(f"Error navigating to Vehicles page: {str(e)}", logging.ERROR)
-            self.driver.save_screenshot('logs/vehicles_navigation_error.png')
+            self.log(f"Error in navigation process: {str(e)}", logging.ERROR)
+            self.driver.save_screenshot('logs/navigation_error.png')
     
     def log_vehicles_page_info(self):
         """
