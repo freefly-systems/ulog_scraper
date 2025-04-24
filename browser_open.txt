@@ -1,3 +1,3 @@
-Browser remains open with session at: https://suite.auterion.com/flights?vehicle=1661&fromVehicle=true&type=flight&page=1&sortDirection=desc&sortBy=date
+Browser remains open with session at: https://suite.auterion.com/logs/9077b9e9-557d-454c-a71a-c44796eec964
 Script has finished execution, but browser should remain open.
 Close browser manually when finished examining.

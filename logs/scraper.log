@@ -803,3 +803,345 @@
 2025-04-23 17:04:34,496 - ulog_scraper - INFO - Script execution complete - browser window will remain open for manual inspection
 2025-04-23 17:04:34,497 - ulog_scraper - INFO - Login successful - keeping browser open for examination
 2025-04-23 17:04:34,522 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-24 10:45:29,582 - ulog_scraper - INFO - Loaded .env file
+2025-04-24 10:45:30,970 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-24 10:45:31,119 - ulog_scraper - INFO - Starting login process
+2025-04-24 10:45:34,540 - ulog_scraper - INFO - Navigated to login page
+2025-04-24 10:45:40,190 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-24 10:45:40,191 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-24 10:45:40,191 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-24 10:45:40,191 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-24 10:45:40,216 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-24 10:45:40,242 - ulog_scraper - INFO - Found login button: Login
+2025-04-24 10:45:41,096 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-24 10:45:41,097 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-24 10:45:41,097 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 10:45:41,194 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 10:45:41,194 - ulog_scraper - INFO - Entering email address
+2025-04-24 10:45:41,347 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-24 10:45:41,368 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-24 10:45:42,056 - ulog_scraper - INFO - Clicked continue button
+2025-04-24 10:45:42,056 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-24 10:45:46,552 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-24 10:45:46,552 - ulog_scraper - INFO - Entering password
+2025-04-24 10:45:46,605 - ulog_scraper - INFO - Looking for final submit button
+2025-04-24 10:45:46,618 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-24 10:45:48,596 - ulog_scraper - INFO - Clicked submit button
+2025-04-24 10:45:48,596 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-24 10:45:48,611 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-24 10:45:48,859 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=S0bhIW5D0iGlm28ws_MrcvEMiqQe04qXivAVGTd5ta3HD&state=bHhQRmladWpzdVc0N0FvYXZ2Mm9BVHhyM0VxVUQxYlY2RjVMTC1ydzNzZA%3D%3D
+2025-04-24 10:45:48,859 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-24 10:45:48,859 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-24 10:45:54,186 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-24 10:45:55,160 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-24 10:46:00,996 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-24 10:46:00,997 - ulog_scraper - INFO - Looking for search input field
+2025-04-24 10:46:01,104 - ulog_scraper - INFO - Found search input with selector input[type='text']
+2025-04-24 10:46:01,104 - ulog_scraper - INFO - Entering 'dv21' in search field
+2025-04-24 10:46:02,427 - ulog_scraper - INFO - Submitting search
+2025-04-24 10:46:02,451 - ulog_scraper - INFO - Waiting for search results to load
+2025-04-24 10:46:07,699 - ulog_scraper - INFO - Screenshot taken of search results
+2025-04-24 10:46:07,699 - ulog_scraper - INFO - Looking for 'Astro DV21 (Nate)' link
+2025-04-24 10:46:07,743 - ulog_scraper - INFO - Found DV21 link: Astro DV21 (Nate)
+2025-04-24 10:46:07,743 - ulog_scraper - INFO - Clicking on 'Astro DV21 (Nate)' link
+2025-04-24 10:46:07,832 - ulog_scraper - INFO - Waiting for vehicle details page to load
+2025-04-24 10:46:16,677 - ulog_scraper - INFO - Current URL after clicking DV21 link: https://suite.auterion.com/vehicles/1661
+2025-04-24 10:46:16,677 - ulog_scraper - INFO - Looking for 'All Flights' link
+2025-04-24 10:46:17,057 - ulog_scraper - INFO - Found All Flights link: All Flights
+2025-04-24 10:46:17,057 - ulog_scraper - INFO - Clicking on 'All Flights' link
+2025-04-24 10:46:17,398 - ulog_scraper - INFO - Waiting for flights page to load
+2025-04-24 10:46:25,798 - ulog_scraper - INFO - Current URL after clicking All Flights link: https://suite.auterion.com/flights?vehicle=1661&fromVehicle=true&type=flight&page=1&sortDirection=desc&sortBy=date
+2025-04-24 10:46:25,813 - ulog_scraper - INFO - Script execution complete - browser window will remain open for manual inspection
+2025-04-24 10:46:25,813 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-24 10:46:25,848 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-24 10:52:12,225 - ulog_scraper - INFO - Loaded .env file
+2025-04-24 10:52:13,478 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-24 10:52:13,625 - ulog_scraper - INFO - Starting login process
+2025-04-24 10:52:19,903 - ulog_scraper - INFO - Navigated to login page
+2025-04-24 10:52:25,533 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-24 10:52:25,534 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-24 10:52:25,534 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-24 10:52:25,534 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-24 10:52:25,559 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-24 10:52:25,585 - ulog_scraper - INFO - Found login button: Login
+2025-04-24 10:52:26,456 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-24 10:52:26,456 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-24 10:52:26,456 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 10:52:26,482 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 10:52:26,482 - ulog_scraper - INFO - Entering email address
+2025-04-24 10:52:26,634 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-24 10:52:26,656 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-24 10:52:26,763 - ulog_scraper - INFO - Clicked continue button
+2025-04-24 10:52:26,763 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-24 10:52:31,694 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-24 10:52:31,704 - ulog_scraper - INFO - Entering password
+2025-04-24 10:52:31,881 - ulog_scraper - INFO - Looking for final submit button
+2025-04-24 10:52:31,905 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-24 10:52:34,149 - ulog_scraper - INFO - Clicked submit button
+2025-04-24 10:52:34,149 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-24 10:52:34,168 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-24 10:52:34,465 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=MnywEta0Vh4bsuGfCA0Lj48MaxsY4sJp3Tz39ABINVXOU&state=S0JDdWlBODJlM0V0YTNJOHE2RzZPVHl6SmRWUlhrVU1DTEYuWmxlMkZpcg%3D%3D
+2025-04-24 10:52:34,465 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-24 10:52:34,465 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-24 10:52:39,998 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-24 10:52:41,012 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-24 10:52:48,796 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-24 10:52:48,796 - ulog_scraper - INFO - Looking for search input field
+2025-04-24 10:52:48,908 - ulog_scraper - INFO - Found search input with selector input[type='text']
+2025-04-24 10:52:48,908 - ulog_scraper - INFO - Entering 'dv21' in search field
+2025-04-24 10:52:50,324 - ulog_scraper - INFO - Submitting search
+2025-04-24 10:52:50,354 - ulog_scraper - INFO - Waiting for search results to load
+2025-04-24 10:52:55,792 - ulog_scraper - INFO - Screenshot taken of search results
+2025-04-24 10:52:55,792 - ulog_scraper - INFO - Looking for 'Astro DV21 (Nate)' link
+2025-04-24 10:52:55,869 - ulog_scraper - INFO - Found DV21 link: Astro DV21 (Nate)
+2025-04-24 10:52:55,869 - ulog_scraper - INFO - Clicking on 'Astro DV21 (Nate)' link
+2025-04-24 10:52:55,996 - ulog_scraper - INFO - Waiting for vehicle details page to load
+2025-04-24 10:53:05,009 - ulog_scraper - INFO - Current URL after clicking DV21 link: https://suite.auterion.com/vehicles/1661
+2025-04-24 10:53:05,009 - ulog_scraper - INFO - Looking for 'All Flights' link
+2025-04-24 10:53:05,228 - ulog_scraper - INFO - Found All Flights link: All Flights
+2025-04-24 10:53:05,228 - ulog_scraper - INFO - Clicking on 'All Flights' link
+2025-04-24 10:53:05,448 - ulog_scraper - INFO - Waiting for flights page to load
+2025-04-24 10:53:14,011 - ulog_scraper - INFO - Current URL after clicking All Flights link: https://suite.auterion.com/flights?vehicle=1661&fromVehicle=true&type=flight&page=1&sortDirection=desc&sortBy=date
+2025-04-24 10:53:14,011 - ulog_scraper - INFO - Looking for MXNT flight entry
+2025-04-24 10:53:14,202 - ulog_scraper - INFO - Found MXNT flight element: MXNTQT • #87
+Apr 21, 2025, 10:21 AM PDT
+Astro DV21 (Nate)
+0
+Add Pilot
+Astro v2.0.17 1h 26min 41s 3km 329m
+0 1
+CRITICAL
+ADD LABEL
+2025-04-24 10:53:14,228 - ulog_scraper - INFO - Found clickable link within MXNT flight row
+2025-04-24 10:53:14,228 - ulog_scraper - INFO - Clicking on MXNT flight entry
+2025-04-24 10:53:14,389 - ulog_scraper - INFO - Waiting for flight details page to load
+2025-04-24 10:53:23,342 - ulog_scraper - INFO - Current URL after clicking MXNT flight: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT
+2025-04-24 10:53:23,496 - ulog_scraper - INFO - Script execution complete - browser window will remain open for manual inspection
+2025-04-24 10:53:23,497 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-24 10:53:23,749 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-24 10:59:52,258 - ulog_scraper - INFO - Loaded .env file
+2025-04-24 10:59:53,552 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-24 10:59:53,728 - ulog_scraper - INFO - Starting login process
+2025-04-24 10:59:59,803 - ulog_scraper - INFO - Navigated to login page
+2025-04-24 11:00:05,168 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-24 11:00:05,168 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-24 11:00:05,168 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-24 11:00:05,168 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-24 11:00:05,188 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-24 11:00:05,208 - ulog_scraper - INFO - Found login button: Login
+2025-04-24 11:00:06,127 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-24 11:00:06,128 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-24 11:00:06,128 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 11:00:06,226 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 11:00:06,226 - ulog_scraper - INFO - Entering email address
+2025-04-24 11:00:06,382 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-24 11:00:06,404 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-24 11:00:07,127 - ulog_scraper - INFO - Clicked continue button
+2025-04-24 11:00:07,127 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-24 11:00:11,159 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-24 11:00:11,160 - ulog_scraper - INFO - Entering password
+2025-04-24 11:00:11,251 - ulog_scraper - INFO - Looking for final submit button
+2025-04-24 11:00:11,262 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-24 11:00:12,966 - ulog_scraper - INFO - Clicked submit button
+2025-04-24 11:00:12,966 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-24 11:00:12,981 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-24 11:00:13,256 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=_hkdcpGNkyqLJ_OlxzW1aGw9vhvrwYFNEzMUfo1BANv5K&state=bHZfSDYwTEYtVVpvMU5qYzhYc19LX3FLSUJYcWQwNzJZV21zOElJXzh3VA%3D%3D
+2025-04-24 11:00:13,257 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-24 11:00:13,257 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-24 11:00:18,586 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-24 11:00:19,586 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-24 11:00:25,825 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-24 11:00:25,825 - ulog_scraper - INFO - Looking for search input field
+2025-04-24 11:00:25,933 - ulog_scraper - INFO - Found search input with selector input[type='text']
+2025-04-24 11:00:25,933 - ulog_scraper - INFO - Entering 'dv21' in search field
+2025-04-24 11:00:27,333 - ulog_scraper - INFO - Submitting search
+2025-04-24 11:00:27,358 - ulog_scraper - INFO - Waiting for search results to load
+2025-04-24 11:00:32,712 - ulog_scraper - INFO - Screenshot taken of search results
+2025-04-24 11:00:32,712 - ulog_scraper - INFO - Looking for 'Astro DV21 (Nate)' link
+2025-04-24 11:00:32,766 - ulog_scraper - INFO - Found DV21 link: Astro DV21 (Nate)
+2025-04-24 11:00:32,767 - ulog_scraper - INFO - Clicking on 'Astro DV21 (Nate)' link
+2025-04-24 11:00:32,874 - ulog_scraper - INFO - Waiting for vehicle details page to load
+2025-04-24 11:00:41,702 - ulog_scraper - INFO - Current URL after clicking DV21 link: https://suite.auterion.com/vehicles/1661
+2025-04-24 11:00:41,702 - ulog_scraper - INFO - Looking for 'All Flights' link
+2025-04-24 11:00:42,000 - ulog_scraper - INFO - Found All Flights link: All Flights
+2025-04-24 11:00:42,000 - ulog_scraper - INFO - Clicking on 'All Flights' link
+2025-04-24 11:00:42,242 - ulog_scraper - INFO - Waiting for flights page to load
+2025-04-24 11:00:50,702 - ulog_scraper - INFO - Current URL after clicking All Flights link: https://suite.auterion.com/flights?vehicle=1661&fromVehicle=true&type=flight&page=1&sortDirection=desc&sortBy=date
+2025-04-24 11:00:50,702 - ulog_scraper - INFO - Looking for MXNT flight entry
+2025-04-24 11:00:50,857 - ulog_scraper - INFO - Found MXNT flight element: MXNTQT • #87
+Apr 21, 2025, 10:21 AM PDT
+Astro DV21 (Nate)
+0
+Add Pilot
+Astro v2.0.17 1h 26min 41s 3km 329m
+0 1
+CRITICAL
+ADD LABEL
+2025-04-24 11:00:50,886 - ulog_scraper - INFO - Found clickable link within MXNT flight row
+2025-04-24 11:00:50,886 - ulog_scraper - INFO - Clicking on MXNT flight entry
+2025-04-24 11:00:51,059 - ulog_scraper - INFO - Waiting for flight details page to load
+2025-04-24 11:00:59,475 - ulog_scraper - INFO - Current URL after clicking MXNT flight: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT
+2025-04-24 11:00:59,476 - ulog_scraper - INFO - Looking for 'log' button
+2025-04-24 11:01:00,040 - ulog_scraper - INFO - Found log button: Logs
+2025-04-24 11:01:00,041 - ulog_scraper - INFO - Clicking on 'log' button
+2025-04-24 11:01:00,475 - ulog_scraper - INFO - Waiting for logs page to load
+2025-04-24 11:01:08,768 - ulog_scraper - INFO - Current URL after clicking log button: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT/logs
+2025-04-24 11:01:08,773 - ulog_scraper - INFO - Script execution complete - browser window will remain open for manual inspection
+2025-04-24 11:01:08,773 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-24 11:01:08,799 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-24 11:05:25,513 - ulog_scraper - INFO - Loaded .env file
+2025-04-24 11:05:26,601 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-24 11:05:26,729 - ulog_scraper - INFO - Starting login process
+2025-04-24 11:05:30,106 - ulog_scraper - INFO - Navigated to login page
+2025-04-24 11:05:35,568 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-24 11:05:35,568 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-24 11:05:35,568 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-24 11:05:35,569 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-24 11:05:35,592 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-24 11:05:35,629 - ulog_scraper - INFO - Found login button: Login
+2025-04-24 11:05:36,675 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-24 11:05:36,676 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-24 11:05:36,676 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 11:05:36,695 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 11:05:36,695 - ulog_scraper - INFO - Entering email address
+2025-04-24 11:05:36,859 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-24 11:05:36,883 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-24 11:05:37,515 - ulog_scraper - INFO - Clicked continue button
+2025-04-24 11:05:37,516 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-24 11:05:42,345 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-24 11:05:42,345 - ulog_scraper - INFO - Entering password
+2025-04-24 11:05:42,478 - ulog_scraper - INFO - Looking for final submit button
+2025-04-24 11:05:42,502 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-24 11:05:44,734 - ulog_scraper - INFO - Clicked submit button
+2025-04-24 11:05:44,734 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-24 11:05:44,753 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-24 11:05:45,024 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=WF_IxNY9EJdZjuvJZsTv2J3RDO6r8ob-dCgp6iteI8MlC&state=TUJ0Q3ZQM1dUNF9pbVZHYmYyUkEyU21aendqQ25taURpWU5WRXNSYVZ3Uw%3D%3D
+2025-04-24 11:05:45,024 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-24 11:05:45,025 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-24 11:05:50,448 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-24 11:05:51,429 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-24 11:05:58,588 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-24 11:05:58,588 - ulog_scraper - INFO - Looking for search input field
+2025-04-24 11:05:58,697 - ulog_scraper - INFO - Found search input with selector input[type='text']
+2025-04-24 11:05:58,697 - ulog_scraper - INFO - Entering 'dv21' in search field
+2025-04-24 11:06:00,043 - ulog_scraper - INFO - Submitting search
+2025-04-24 11:06:00,085 - ulog_scraper - INFO - Waiting for search results to load
+2025-04-24 11:06:05,381 - ulog_scraper - INFO - Screenshot taken of search results
+2025-04-24 11:06:05,381 - ulog_scraper - INFO - Looking for 'Astro DV21 (Nate)' link
+2025-04-24 11:06:05,444 - ulog_scraper - INFO - Found DV21 link: Astro DV21 (Nate)
+2025-04-24 11:06:05,444 - ulog_scraper - INFO - Clicking on 'Astro DV21 (Nate)' link
+2025-04-24 11:06:05,538 - ulog_scraper - INFO - Waiting for vehicle details page to load
+2025-04-24 11:06:14,509 - ulog_scraper - INFO - Current URL after clicking DV21 link: https://suite.auterion.com/vehicles/1661
+2025-04-24 11:06:14,510 - ulog_scraper - INFO - Looking for 'All Flights' link
+2025-04-24 11:06:14,705 - ulog_scraper - INFO - Found All Flights link: All Flights
+2025-04-24 11:06:14,705 - ulog_scraper - INFO - Clicking on 'All Flights' link
+2025-04-24 11:06:14,910 - ulog_scraper - INFO - Waiting for flights page to load
+2025-04-24 11:06:23,438 - ulog_scraper - INFO - Current URL after clicking All Flights link: https://suite.auterion.com/flights?vehicle=1661&fromVehicle=true&type=flight&page=1&sortDirection=desc&sortBy=date
+2025-04-24 11:06:23,439 - ulog_scraper - INFO - Looking for MXNT flight entry
+2025-04-24 11:06:23,580 - ulog_scraper - INFO - Found MXNT flight element: MXNTQT • #87
+Apr 21, 2025, 10:21 AM PDT
+Astro DV21 (Nate)
+0
+Add Pilot
+Astro v2.0.17 1h 26min 41s 3km 329m
+0 1
+CRITICAL
+ADD LABEL
+2025-04-24 11:06:23,610 - ulog_scraper - INFO - Found clickable link within MXNT flight row
+2025-04-24 11:06:23,610 - ulog_scraper - INFO - Clicking on MXNT flight entry
+2025-04-24 11:06:23,751 - ulog_scraper - INFO - Waiting for flight details page to load
+2025-04-24 11:06:32,578 - ulog_scraper - INFO - Current URL after clicking MXNT flight: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT
+2025-04-24 11:06:32,578 - ulog_scraper - INFO - Looking for 'log' button
+2025-04-24 11:06:33,020 - ulog_scraper - INFO - Found log button: Logs
+2025-04-24 11:06:33,020 - ulog_scraper - INFO - Clicking on 'log' button
+2025-04-24 11:06:33,476 - ulog_scraper - INFO - Waiting for logs page to load
+2025-04-24 11:06:41,789 - ulog_scraper - INFO - Current URL after clicking log button: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT/logs
+2025-04-24 11:06:41,789 - ulog_scraper - INFO - Looking for 'View Analytics' button
+2025-04-24 11:06:41,869 - ulog_scraper - INFO - Found View Analytics button: View Analytics
+2025-04-24 11:06:41,869 - ulog_scraper - INFO - Clicking on 'View Analytics' button
+2025-04-24 11:06:41,977 - ulog_scraper - INFO - Waiting for analytics page to load
+2025-04-24 11:06:51,477 - ulog_scraper - INFO - Current URL after clicking View Analytics button: https://suite.auterion.com/logs/9077b9e9-557d-454c-a71a-c44796eec964
+2025-04-24 11:06:51,484 - ulog_scraper - INFO - Script execution complete - browser window will remain open for manual inspection
+2025-04-24 11:06:51,484 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-24 11:06:51,612 - ulog_scraper - INFO - Spider closed but keeping browser open as requested
+2025-04-24 11:10:21,976 - ulog_scraper - INFO - Loaded .env file
+2025-04-24 11:10:23,588 - ulog_scraper - INFO - Selenium driver initialized
+2025-04-24 11:10:23,741 - ulog_scraper - INFO - Starting login process
+2025-04-24 11:10:30,446 - ulog_scraper - INFO - Navigated to login page
+2025-04-24 11:10:36,280 - ulog_scraper - INFO - Saved screenshot of initial login page
+2025-04-24 11:10:36,280 - ulog_scraper - INFO - Starting multi-step login process
+2025-04-24 11:10:36,281 - ulog_scraper - INFO - Step 1: Finding initial login button
+2025-04-24 11:10:36,281 - ulog_scraper - INFO - Trying selector: css selector - button.button-primary
+2025-04-24 11:10:36,310 - ulog_scraper - INFO - Found 3 elements with selector button.button-primary
+2025-04-24 11:10:36,342 - ulog_scraper - INFO - Found login button: Login
+2025-04-24 11:10:37,301 - ulog_scraper - INFO - Clicked login button, waiting for email form
+2025-04-24 11:10:37,301 - ulog_scraper - INFO - Step 2: Looking for email input field
+2025-04-24 11:10:37,301 - ulog_scraper - INFO - Trying to find email field with: xpath - //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 11:10:37,348 - ulog_scraper - INFO - Found email input with selector //label[contains(text(), 'Email address')]/following::input[1]
+2025-04-24 11:10:37,348 - ulog_scraper - INFO - Entering email address
+2025-04-24 11:10:37,512 - ulog_scraper - INFO - Looking for continue/next button after email entry
+2025-04-24 11:10:37,537 - ulog_scraper - INFO - Found continue button with selector button[type='submit']
+2025-04-24 11:10:38,385 - ulog_scraper - INFO - Clicked continue button
+2025-04-24 11:10:38,385 - ulog_scraper - INFO - Step 3: Waiting for password field
+2025-04-24 11:10:43,286 - ulog_scraper - INFO - Found password input with selector input[type='password']
+2025-04-24 11:10:43,287 - ulog_scraper - INFO - Entering password
+2025-04-24 11:10:43,392 - ulog_scraper - INFO - Looking for final submit button
+2025-04-24 11:10:43,414 - ulog_scraper - INFO - Found submit button with selector button[type='submit']
+2025-04-24 11:10:45,381 - ulog_scraper - INFO - Clicked submit button
+2025-04-24 11:10:45,381 - ulog_scraper - INFO - Waiting for successful login (up to 3 minutes)
+2025-04-24 11:10:45,404 - ulog_scraper - INFO - Login appears successful! Page loaded completely.
+2025-04-24 11:10:45,759 - ulog_scraper - INFO - Current URL after login: https://suite.auterion.com/authenticated?code=nhucfoLFXaguZs58BMafiagcuwcRcJKk_csuHC9-0u_d2&state=NHpkQkhacEhYTTBKMzItSkVvOTdvUUpGcGFPVlMtRTR6VUp0M1cyX0NGVg%3D%3D
+2025-04-24 11:10:45,759 - ulog_scraper - INFO - Attempting to navigate to Vehicles page
+2025-04-24 11:10:45,760 - ulog_scraper - INFO - Ensuring page is fully loaded
+2025-04-24 11:10:51,913 - ulog_scraper - INFO - Direct navigation to Vehicles page
+2025-04-24 11:10:53,287 - ulog_scraper - INFO - Waiting for Vehicles page to load
+2025-04-24 11:10:58,838 - ulog_scraper - INFO - Current URL after direct navigation: https://suite.auterion.com/vehicles
+2025-04-24 11:10:58,838 - ulog_scraper - INFO - Looking for search input field
+2025-04-24 11:10:59,026 - ulog_scraper - INFO - Found search input with selector input[type='text']
+2025-04-24 11:10:59,026 - ulog_scraper - INFO - Entering 'dv21' in search field
+2025-04-24 11:11:00,554 - ulog_scraper - INFO - Submitting search
+2025-04-24 11:11:00,595 - ulog_scraper - INFO - Waiting for search results to load
+2025-04-24 11:11:06,086 - ulog_scraper - INFO - Screenshot taken of search results
+2025-04-24 11:11:06,086 - ulog_scraper - INFO - Looking for 'Astro DV21 (Nate)' link
+2025-04-24 11:11:06,160 - ulog_scraper - INFO - Found DV21 link: Astro DV21 (Nate)
+2025-04-24 11:11:06,161 - ulog_scraper - INFO - Clicking on 'Astro DV21 (Nate)' link
+2025-04-24 11:11:06,271 - ulog_scraper - INFO - Waiting for vehicle details page to load
+2025-04-24 11:11:15,168 - ulog_scraper - INFO - Current URL after clicking DV21 link: https://suite.auterion.com/vehicles/1661
+2025-04-24 11:11:15,168 - ulog_scraper - INFO - Looking for 'All Flights' link
+2025-04-24 11:11:15,670 - ulog_scraper - INFO - Found All Flights link: All Flights
+2025-04-24 11:11:15,670 - ulog_scraper - INFO - Clicking on 'All Flights' link
+2025-04-24 11:11:15,905 - ulog_scraper - INFO - Waiting for flights page to load
+2025-04-24 11:11:24,916 - ulog_scraper - INFO - Current URL after clicking All Flights link: https://suite.auterion.com/flights?vehicle=1661&fromVehicle=true&type=flight&page=1&sortDirection=desc&sortBy=date
+2025-04-24 11:11:24,916 - ulog_scraper - INFO - Looking for MXNT flight entry
+2025-04-24 11:11:25,138 - ulog_scraper - INFO - Found MXNT flight element: MXNTQT • #87
+Apr 21, 2025, 10:21 AM PDT
+Astro DV21 (Nate)
+0
+Add Pilot
+Astro v2.0.17 1h 26min 41s 3km 329m
+0 1
+CRITICAL
+ADD LABEL
+2025-04-24 11:11:25,193 - ulog_scraper - INFO - Found clickable link within MXNT flight row
+2025-04-24 11:11:25,193 - ulog_scraper - INFO - Clicking on MXNT flight entry
+2025-04-24 11:11:25,399 - ulog_scraper - INFO - Waiting for flight details page to load
+2025-04-24 11:11:34,317 - ulog_scraper - INFO - Current URL after clicking MXNT flight: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT
+2025-04-24 11:11:34,317 - ulog_scraper - INFO - Looking for 'log' button
+2025-04-24 11:11:34,969 - ulog_scraper - INFO - Found log button: Logs
+2025-04-24 11:11:34,969 - ulog_scraper - INFO - Clicking on 'log' button
+2025-04-24 11:11:35,181 - ulog_scraper - INFO - Waiting for logs page to load
+2025-04-24 11:11:43,879 - ulog_scraper - INFO - Current URL after clicking log button: https://suite.auterion.com/flights/01JSCNXARJVCSGJ3PZV6MXNTQT/logs
+2025-04-24 11:11:43,880 - ulog_scraper - INFO - Looking for 'View Analytics' button
+2025-04-24 11:11:44,010 - ulog_scraper - INFO - Found View Analytics button: View Analytics
+2025-04-24 11:11:44,010 - ulog_scraper - INFO - Clicking on 'View Analytics' button
+2025-04-24 11:11:44,125 - ulog_scraper - INFO - Waiting for analytics page to load
+2025-04-24 11:11:54,040 - ulog_scraper - INFO - Current URL after clicking View Analytics button: https://suite.auterion.com/logs/9077b9e9-557d-454c-a71a-c44796eec964
+2025-04-24 11:11:54,042 - ulog_scraper - INFO - Looking for 'Download log' button
+2025-04-24 11:11:56,702 - ulog_scraper - INFO - Found Download log button: Download Log
+2025-04-24 11:11:56,702 - ulog_scraper - INFO - Clicking on 'Download log' button
+2025-04-24 11:12:04,261 - ulog_scraper - INFO - Screenshot taken after initiating log download
+2025-04-24 11:12:04,372 - ulog_scraper - INFO - Current URL after clicking Download log button: https://suite.auterion.com/logs/9077b9e9-557d-454c-a71a-c44796eec964
+2025-04-24 11:12:04,372 - ulog_scraper - INFO - Log file should now be downloading to your downloads folder
+2025-04-24 11:12:04,544 - ulog_scraper - INFO - Script execution complete - browser window will remain open for manual inspection
+2025-04-24 11:12:04,546 - ulog_scraper - INFO - Login successful - keeping browser open for examination
+2025-04-24 11:12:04,683 - ulog_scraper - INFO - Spider closed but keeping browser open as requested

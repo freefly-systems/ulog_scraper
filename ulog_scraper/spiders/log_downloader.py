@@ -398,7 +398,8 @@ class LogDownloaderSpider(scrapy.Spider):
     def navigate_to_vehicles(self):
         """
         Navigate to the Vehicles page, search for 'dv21', click on the specific vehicle,
-        then click on "All Flights" button, and keep browser open.
+        click on "All Flights" button, click on the MXNT flight entry, click on the "log" button,
+        click on "View Analytics", and finally click on "Download log".
         """
         self.log("Attempting to navigate to Vehicles page")
         try:
@@ -564,6 +565,224 @@ class LogDownloaderSpider(scrapy.Spider):
                     # Take screenshot of the flights page
                     self.driver.save_screenshot('logs/astro_dv21_flights.png')
                     self.log(f"Current URL after clicking All Flights link: {self.driver.current_url}")
+                    
+                    # STEP 4: Find and click on the MXNT flight entry
+                    self.log("Looking for MXNT flight entry")
+                    mxnt_flight_selectors = [
+                        # Based on the HTML from screenshot - specifically targeting MXNT flight
+                        (By.XPATH, "//tr[contains(., 'MXNT')]"),
+                        (By.XPATH, "//a[contains(., 'MXNT')]"),
+                        (By.XPATH, "//td[contains(., 'MXNT')]/parent::tr"),
+                        # More specific targeting based on class or structure
+                        (By.XPATH, "//a[contains(@href, '/flights/') and contains(., 'MXNT')]"),
+                        (By.CSS_SELECTOR, "a[href^='/flights/'][href*='MXNT']"),
+                        # Most specific based on the exact structure seen in screenshot
+                        (By.XPATH, "//span[contains(text(), 'MXNT')]/ancestor::tr"),
+                        (By.XPATH, "//td//span[contains(text(), 'MXNT')]"),
+                        # Look for the MXNT01 • #87 text pattern
+                        (By.XPATH, "//td[contains(., 'MXNT') and contains(., '#')]")
+                    ]
+                    
+                    mxnt_flight_element = None
+                    for selector_type, selector in mxnt_flight_selectors:
+                        try:
+                            elements = self.driver.find_elements(selector_type, selector)
+                            for element in elements:
+                                if element.is_displayed() and "MXNT" in element.text:
+                                    mxnt_flight_element = element
+                                    self.log(f"Found MXNT flight element: {element.text}")
+                                    break
+                            if mxnt_flight_element:
+                                break
+                        except Exception as e:
+                            self.log(f"Error with MXNT flight selector {selector}: {e}")
+                    
+                    # If we found the MXNT flight element, click on it
+                    if mxnt_flight_element:
+                        # Try to find a clickable element within the row (like a link)
+                        try:
+                            # First try to find a link within the element
+                            clickable = mxnt_flight_element.find_element(By.TAG_NAME, "a")
+                            self.log("Found clickable link within MXNT flight row")
+                        except:
+                            # If no link found, use the element itself
+                            clickable = mxnt_flight_element
+                            self.log("Using the flight row element directly for clicking")
+                        
+                        self.log("Clicking on MXNT flight entry")
+                        clickable.click()
+                        
+                        # Wait for flight details page to load
+                        self.log("Waiting for flight details page to load")
+                        WebDriverWait(self.driver, 30).until(
+                            lambda driver: driver.execute_script("return document.readyState") == "complete"
+                        )
+                        time.sleep(8)  # Longer wait to ensure all content is loaded
+                        
+                        # Take screenshot of the flight details page
+                        self.driver.save_screenshot('logs/mxnt_flight_details.png')
+                        self.log(f"Current URL after clicking MXNT flight: {self.driver.current_url}")
+                        
+                        # STEP 5: Find and click on the "log" button
+                        self.log("Looking for 'log' button")
+                        log_button_selectors = [
+                            # Based on the HTML from the new screenshot
+                            (By.CSS_SELECTOR, "a[href*='/logs']"),
+                            (By.XPATH, "//a[contains(@href, '/logs')]"),
+                            # Based on the visible "log" text in the screenshot
+                            (By.XPATH, "//a[text()='log']"),
+                            (By.XPATH, "//span[text()='log']"),
+                            (By.CSS_SELECTOR, "a.tab-item[href*='logs']"),
+                            # Based on the "files" tab nearby
+                            (By.XPATH, "//a[contains(@href, '/flights/') and contains(@href, '/logs')]"),
+                            # More generic fallbacks
+                            (By.XPATH, "//*[contains(text(), 'log') and not(contains(text(), 'login'))]"),
+                            # The URL shown in the screenshot
+                            (By.CSS_SELECTOR, "a[href='https://suite.auterion.com/flights/01JSCNXARJVCSG3PZV6MXNTQT/logs']")
+                        ]
+                        
+                        log_button = None
+                        for selector_type, selector in log_button_selectors:
+                            try:
+                                elements = self.driver.find_elements(selector_type, selector)
+                                for element in elements:
+                                    if element.is_displayed():
+                                        # Check if the element contains 'log' text but not as part of a longer word
+                                        text = element.text.lower()
+                                        if "log" in text and not any(x in text for x in ["login", "logout", "catalog"]):
+                                            log_button = element
+                                            self.log(f"Found log button: {element.text if element.text else element.get_attribute('href')}")
+                                            break
+                                if log_button:
+                                    break
+                            except Exception as e:
+                                self.log(f"Error with log button selector {selector}: {e}")
+                        
+                        # If we found the log button, click on it
+                        if log_button:
+                            self.log("Clicking on 'log' button")
+                            log_button.click()
+                            
+                            # Wait for logs page to load
+                            self.log("Waiting for logs page to load")
+                            WebDriverWait(self.driver, 30).until(
+                                lambda driver: driver.execute_script("return document.readyState") == "complete"
+                            )
+                            time.sleep(8)  # Longer wait to ensure all content is loaded
+                            
+                            # Take screenshot of the logs page
+                            self.driver.save_screenshot('logs/mxnt_flight_logs.png')
+                            self.log(f"Current URL after clicking log button: {self.driver.current_url}")
+                            
+                            # STEP 6: Find and click on "View Analytics" button
+                            self.log("Looking for 'View Analytics' button")
+                            view_analytics_selectors = [
+                                # Based on the HTML from the newest screenshot
+                                (By.XPATH, "//span[contains(text(), 'View Analytics')]"),
+                                (By.XPATH, "//a[contains(text(), 'View Analytics')]"),
+                                # Based on the visible text in the screenshot
+                                (By.XPATH, "//*[contains(text(), 'View Analytics')]"),
+                                # Based on the structure in the HTML
+                                (By.CSS_SELECTOR, "a.button-default span"),
+                                (By.CSS_SELECTOR, "span.whitespace-nowrap"),
+                                # From the HTML, the link appears to have a specific structure
+                                (By.XPATH, "//a[@data-v-7131a226]"),
+                                (By.XPATH, "//div[@class='self-center ml-auto']//a"),
+                                # Direct reference to the button/link
+                                (By.CSS_SELECTOR, "a.button-default")
+                            ]
+                            
+                            view_analytics_button = None
+                            for selector_type, selector in view_analytics_selectors:
+                                try:
+                                    elements = self.driver.find_elements(selector_type, selector)
+                                    for element in elements:
+                                        if element.is_displayed() and "View Analytics" in element.text:
+                                            view_analytics_button = element
+                                            self.log(f"Found View Analytics button: {element.text}")
+                                            break
+                                    if view_analytics_button:
+                                        break
+                                except Exception as e:
+                                    self.log(f"Error with View Analytics button selector {selector}: {e}")
+                            
+                            # If we found the View Analytics button, click on it
+                            if view_analytics_button:
+                                self.log("Clicking on 'View Analytics' button")
+                                view_analytics_button.click()
+                                
+                                # Wait for analytics page to load
+                                self.log("Waiting for analytics page to load")
+                                WebDriverWait(self.driver, 30).until(
+                                    lambda driver: driver.execute_script("return document.readyState") == "complete"
+                                )
+                                time.sleep(8)  # Longer wait to ensure all content is loaded
+                                
+                                # Take screenshot of the analytics page
+                                self.driver.save_screenshot('logs/mxnt_flight_analytics.png')
+                                self.log(f"Current URL after clicking View Analytics button: {self.driver.current_url}")
+                                
+                                # STEP 7: Find and click on the "Download log" button
+                                self.log("Looking for 'Download log' button")
+                                download_log_selectors = [
+                                    # Based on the HTML from the newest screenshot
+                                    (By.XPATH, "//span[contains(text(), 'Download log')]"),
+                                    (By.XPATH, "//button[contains(., 'Download log')]"),
+                                    # Based on the search bar at the bottom of the page
+                                    (By.CSS_SELECTOR, "input[placeholder='Download log']"),
+                                    (By.XPATH, "//input[@placeholder='Download log']"),
+                                    # Based on the visible text in the screenshot
+                                    (By.XPATH, "//span[text()='Download log']"),
+                                    # Based on the form element in the HTML
+                                    (By.CSS_SELECTOR, "form[method='post'][action*='/api/logs/'][target='_blank']"),
+                                    (By.XPATH, "//form[@method='post' and @action[contains(., '/api/logs/')]]/button"),
+                                    # Direct reference to the button/link with SVG icon
+                                    (By.CSS_SELECTOR, "button.button-default.w-full"),
+                                    (By.XPATH, "//svg[@role='log']/ancestor::button"),
+                                    # Most generic approach
+                                    (By.XPATH, "//*[contains(text(), 'Download')]")
+                                ]
+                                
+                                download_log_button = None
+                                for selector_type, selector in download_log_selectors:
+                                    try:
+                                        elements = self.driver.find_elements(selector_type, selector)
+                                        for element in elements:
+                                            if element.is_displayed():
+                                                if "Download" in element.text:
+                                                    download_log_button = element
+                                                    self.log(f"Found Download log button: {element.text}")
+                                                    break
+                                                elif element.get_attribute("placeholder") and "Download" in element.get_attribute("placeholder"):
+                                                    download_log_button = element
+                                                    self.log(f"Found Download log input: {element.get_attribute('placeholder')}")
+                                                    break
+                                        if download_log_button:
+                                            break
+                                    except Exception as e:
+                                        self.log(f"Error with Download log button selector {selector}: {e}")
+                                
+                                # If we found the Download log button, click on it
+                                if download_log_button:
+                                    self.log("Clicking on 'Download log' button")
+                                    download_log_button.click()
+                                    
+                                    # Wait a moment for the download to start
+                                    time.sleep(5)
+                                    
+                                    # Take a screenshot after clicking download
+                                    self.driver.save_screenshot('logs/log_download_initiated.png')
+                                    self.log("Screenshot taken after initiating log download")
+                                    self.log(f"Current URL after clicking Download log button: {self.driver.current_url}")
+                                    self.log("Log file should now be downloading to your downloads folder")
+                                else:
+                                    self.log("Could not find Download log button", logging.WARNING)
+                            else:
+                                self.log("Could not find View Analytics button", logging.WARNING)
+                        else:
+                            self.log("Could not find log button", logging.WARNING)
+                    else:
+                        self.log("Could not find MXNT flight entry", logging.WARNING)
                 else:
                     self.log("Could not find All Flights link", logging.WARNING)
             else:
@@ -575,7 +794,7 @@ class LogDownloaderSpider(scrapy.Spider):
             # Create a file to signal we're keeping the browser open
             with open('browser_open.txt', 'w') as f:
                 f.write(f"Browser remains open with session at: {self.driver.current_url}\n")
-                f.write("Navigation completed through: Vehicles page -> DV21 details -> All Flights\n")
+                f.write("Navigation completed through: Vehicles page -> DV21 details -> All Flights -> MXNT flight -> Logs -> View Analytics -> Download log\n")
                 f.write("Script has finished execution, but browser should remain open.\n")
                 f.write("Close browser manually when finished examining.")
             
