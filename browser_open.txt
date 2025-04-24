@@ -1,3 +1,4 @@
 Browser remains open with session at: https://suite.auterion.com/logs/9077b9e9-557d-454c-a71a-c44796eec964
+Navigation completed through: Vehicles page -> DV21 details -> All Flights -> MXNT flight -> Logs -> View Analytics -> Download log
 Script has finished execution, but browser should remain open.
 Close browser manually when finished examining.
